@@ -7,10 +7,14 @@
 
 <h1>Pong</h1>
 
-<h2>1. Proměnné</h2>
+<p>
+    K dokončení tohoto kurzu budete potřebovat Python s knihovnou Pygame.
+</p>
+
+<h2>1. Proměnné a datové typy</h2>
 <p>
     Vytvoř proměné: <br>
-    Na počítání skóre pro Hráče1 a hráče2<br>
+    Na počítání skóre pro Hráče1 a hráče2 (číselně)<br>
     <br>
 
     Správné řešení můžeš otestovat pomocí print:<br>
@@ -22,13 +26,14 @@
 </p>
 
 
-<h2>2. Větvení</h2>
+<h2>2. Větvení - if-else </h2>
 <p>
-    Vytvoř proměnou "Vzálenost"<br>
+    Vytvoř proměnou "Vzálenost" (můžeme si tuto proměnou představit jako vzálenost míčku od levé hrany obrazovky)<br>
     <br>
     Vytvoř podmínky pro:<br>
-    Potřebuješ aby Hráč1 dostal bod když je vzdálenost větší jak 10<br>
-    a aby hráč2 dostal bod když je vzdálenost meší jak 0<br>
+    Potřebuješ aby Hráč1 dostal bod když je Vzálenost větší jak 10<br>
+    a aby hráč2 dostal bod když je Vzálenost meší jak 0<br>
+    když platí 1 nebo 2 podmínka nastav vzdálenost na 5<br>
     <br>
 
     Správné řešení můžeš otestovat pomocí print:<br>
@@ -40,69 +45,107 @@
     <br><a href="https://www.w3schools.com/python/python_conditions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
 </p>
 
-<h2>3. Vstup</h2>
-    Vytvoř Vstup(input) který bude určovat Vzálenost<br>
+<h2>3. Cykly - For, range()</h2>
+<p>
+    Vytvoř cyklus(for) který přičte 1 k Vzálenost,  vypočítá a vypíše stav vzdálenosti a bodů (toto celé 15x)<br>
+    <br>
+    Treminal:<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 6<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 7<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 8<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 9<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 10<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 5<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 6<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 7<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 8<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 9<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 10<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
+    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 5<br>
+    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 6<br>
+    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 7<br>
+    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 8<br>
+
+
+    <br><a href="https://www.w3schools.com/python/python_for_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
+</p>
+
+
+<h2>4. Vstup</h2>
+<p>
+    Vytvoř Vstup(input) který bude přičítat/odečítat Vzálenost (místo kroku: 3. Cykly - For)<br>
     <br>
 
     Treminal:<br>
     Hráč 1 má skóre:0 a Hráč 2 má skóre:0<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
 
     <br><a href="https://www.w3schools.com/python/ref_func_input.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-<p>
-
 </p>
 
-<h2>4. Cykly</h2>
+<h2>5. Cykly - while</h2>
 <p>
-    Vytvoř cyklus který poběží dokud jeden z hráčů nebude mít 10 bodů<br>
+    Vytvoř cyklus(while) který poběží dokud jeden z hráčů nebude mít 10 bodů<br>
     <br>
 
     Treminal:<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:3 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:4 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:5 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:6 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:7 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:8 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
+    Vzdálenost je:5+6<br>
     Hráč 1 má skóre:9 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:11<br>
-    Hráč 1 má skóre:10 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
 
     <br><a href="https://www.w3schools.com/python/python_while_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
 </p>
 
-<h2>5. Funkce</h2>
+<h2>6. Funkce - Return, Argumenty, Předávání odkazem</h2>
 <p>
-    Počítání bodů z úkolu 2. (Větvení) převeď na funkce<br>
-    Při vyvolání funkce funkce zpočítá body a vypíše je pouze tehdy když bude změna.
+    Přičítání bodů z úkolu 2.(Větvení - if-else) převeď do funkce(s jedním Argumentem(pro body hráče))<br>
+    Při vyvolání funkce, funkce "přičte"(za pomocí Return) body a vypíše je. Funkci voláme pouze tehdy když bude změna.<br>
     <br>
-
     Treminal:<br>
-    Vzdálenost je:11<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5<br>
-    Vzdálenost je:6<br>
-    Vzdálenost je:12<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 12<br>
-    Vzdálenost je:-10<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:1 a vzdálenost je -10<br>
+    Vzdálenost je:5+2<br>
+    Vzdálenost je:7+2<br>
+    Vzdálenost je:9+2<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
+    Vzdálenost je:5+-6<br>
+    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je -1<br>
 
     <br><a href="https://www.w3schools.com/python/python_functions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
 </p>
 
+<h2>7. Funkce - Předávání hodnotou</h2>
+<p>
+    Resetování vzdálenosti z úkolu 2.(Větvení - if-else) převeď do funkce(s jedním Argumentem(pro konstantu vzdálenosti(5)))<br>
+    Při vyvolání funkce, funkce nastaví(za pomocí Return) Vzdálenost a vypíše ji. Funkci voláme pouze tehdy když bude změna v bodech.<br>
+    <br>
+    Treminal:<br>
+    Vzdálenost je:5+2<br>
+    Vzdálenost je:7+2<br>
+    Vzdálenost je:9+2<br>
+    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
+    Vzdálenost je 5<br>
+
+    <br><a href="https://www.w3schools.com/python/python_functions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
+</p>
 
 
 </body>
