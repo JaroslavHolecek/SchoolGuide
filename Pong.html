@@ -11,35 +11,50 @@
     K dokončení tohoto kurzu budete potřebovat Python s knihovnou Pygame.
 </p>
 
-<h2>1. Proměnné a datové typy</h2>
-<p>
-    Vytvoř proměné: <br>
-    Na počítání skóre pro Hráče1 a hráče2 (číselně)<br>
-    <br>
+<!-- Nečíslovat manuálně -> až tam budeme přidávat/odebírat krok, tak se z přečíslování zblázníme..
+    Sepište jako <ol> (a <div> bude jediná věc v každém <li>) -->
+<ol>
+    <li>
+        <!-- Jednotlivé části stránky rozdělujte do divů a přiřazujte jim třídy - až je pak budeme chtít graficky upravit, ušetří nám to spoustu práce -->
+        <div class="task_container">
+            <h2 class="task_header">Skóre hráčů</h2> <!-- Není potřeba pojmenovávat kroky podle témat, prostě je pojmenujte podle toho, co se v daném kroku stane  -->
+            <div class="task_assignment">
+                <p>Vytvoř proměné na počítání skóre pro Hráče1 a Hráče2 (číselně).</p>                
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>Hráč 1 má skóre:0 a Hráč 2 má skóre:0</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_variables.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+</ol>
 
-    Správné řešení můžeš otestovat pomocí print:<br>
-    print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore}")<br>
-    Treminal:<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0<br>
-
-    <br><a href="https://www.w3schools.com/python/python_variables.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-
+        
 
 <h2>2. Větvení - if-else </h2>
 <p>
+    <!-- Pokud instruujete, jak se má proměnná jmenovat, vymyslete smysluplný název - zde třeba "micek_poziceX", ale názvy proměnných klidně neudávejte -> ať si je žáci vymyslí sami  -->
     Vytvoř proměnou "Vzálenost" (můžeme si tuto proměnou představit jako vzálenost míčku od levé hrany obrazovky)<br>
-    <br>
+    <br> <!-- br používejte jen tam, kde se skutečně jedná o JEDEN text/odstavec, ve kterém chcete ukončit řádku - tady je spíš lepší udělat každé <p> zvlášť, viz vzorový úkol výše -->
     Vytvoř podmínky pro:<br>
-    Potřebuješ aby Hráč1 dostal bod když je Vzálenost větší jak 10<br>
-    a aby hráč2 dostal bod když je Vzálenost meší jak 0<br>
-    když platí 1 nebo 2 podmínka nastav vzdálenost na 5<br>
+    <!-- Pište instrukce popisně - nikoliv "potřebuješ aby" -->
+    Hráč1 získá bod, pokud je vzdálenost míčku větší než 10 (míček je hodně vpravo)<br>
+    a hráč2 získá bod, pokud je vzdálenost míčku menší než 0 (míček je hodně vlevo)<br>
+    pokud některý z hráčů získá bod, nastav vzdálenost na 5<br>
     <br>
 
     Správné řešení můžeš otestovat pomocí print:<br>
     print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a vzdálenost je {Vzalenost}")<br>
     Treminal:<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0<br>
     Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
 
     <br><a href="https://www.w3schools.com/python/python_conditions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
@@ -75,6 +90,8 @@
 
 <h2>4. Vstup</h2>
 <p>
+    <!-- 1) napište jakými klávesami se má hodnota měnit a jak se má měnit"
+    2) Nedává smysl manuálně hýbat míčkem... pro manuální pohyb nechte žáky vytvořit samotného hráče - to asi až o něco později -->
     Vytvoř Vstup(input) který bude přičítat/odečítat Vzálenost (místo kroku: 3. Cykly - For)<br>
     <br>
 
