@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Pong</title>
 </head>
+
 <body>
 
 <h1>Pong</h1>
-
 <p>
-    K dokončení tohoto kurzu budete potřebovat Python s knihovnou Pygame.
+    K dokončení tohoto kurzu budete potřebovat Python s knihovnami Pygame a Random.
 </p>
 
-<!-- Nečíslovat manuálně -> až tam budeme přidávat/odebírat krok, tak se z přečíslování zblázníme..
-    Sepište jako <ol> (a <div> bude jediná věc v každém <li>) -->
 <ol>
     <li>
-        <!-- Jednotlivé části stránky rozdělujte do divů a přiřazujte jim třídy - až je pak budeme chtít graficky upravit, ušetří nám to spoustu práce -->
         <div class="task_container">
-            <h2 class="task_header">Skóre hráčů</h2> <!-- Není potřeba pojmenovávat kroky podle témat, prostě je pojmenujte podle toho, co se v daném kroku stane  -->
+            <h2 class="task_header">Skóre hráčů</h2>
             <div class="task_assignment">
                 <p>Vytvoř proměné na počítání skóre pro Hráče1 a Hráče2 (číselně).</p>                
             </div>
@@ -36,146 +34,204 @@
             </div>
         </div>
     </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Míček</h2>
+
+            <h3 class="task_header1">Vytvoření míčku</h3>
+            <div class="task_assignment">
+                <p>Vytvoř proměnou pro pozici míčku na ose X (můžeme si tuto proměnou představit jako vzálenost míčku od levé hrany obrazovky)</p>
+                <p>Vytvoř podmínky pro:</p>
+                <p>Hráč1 získá bod, pokud je vzdálenost míčku větší než 10 (míček je hodně vpravo)</p>
+                <p>Hráč2 získá bod, pokud je vzdálenost míčku menší než 0 (míček je hodně vlevo)</p>
+                <p>Pokud některý z hráčů získá bod, nastav "pozici míčku na ose X" na 5 (v budoucnu tato hodota bude střed obrazovky)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 5</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_conditions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb míčku 10x</h3>
+            <div class="task_assignment">
+                <p>Vytvoř cyklus(for) který přičte 1 k PoziciX Míčku, vypočítá a vypíše stav vzdálenosti a bodů (toto celé 10x)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br></code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_for_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb míčku do nekonečna</h3>
+            <div class="task_assignment">
+                <p>Nadraď cyklus <code>for</code> cyklem <code>while</code></p>
+                <p>Cyklus <code>for</code> má využití pro přesný počet opakování zatímco cyklus <code>while</code> "poběží" dokud bude platit podmínka. Pro naše potřeby bude lepší využít <code>while</code></p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br>
+                        ...
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_while_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb míčku sem-tam</h3>
+            <div class="task_assignment">
+                <p>Když se míček dostane na jednu stranu tak se odrazí a až pak se vrátí doprostřed.</p>
+                <p>Vytvoříme si proměnou kterou budem přičítat k PoziciX Míčku (místo toho aby jsme přičítali 1 tak budem přičítat proměnou s hodnotou 1)<br>
+                    Když se míček dostane na konec tak proměnou vynásobíme -1 aby se míček po návratu pohiboval opačným směrem.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 4<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 3<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 2<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 1<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 0<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:2 a Hráč 2 má skóre:1 a PoziceX Míčku je 5<br>
+                        ...
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Ukončení programu po dosažení skóre</h3>
+            <div class="task_assignment">
+                <p>Když jeden z hráčů bude mít skóre 20 hra se ukončí.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br> 
+                        ...<br>
+                        <br>
+                        ...<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:18 a PoziceX Míčku je 0<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:20 a Hráč 2 má skóre:19 a PoziceX Míčku je 5<br>
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_while_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Vytvoření 2 osy míčku</h2>
+            <div class="task_assignment">
+                <p>Vytvoř proměnou pro pozici míčku na ose Y (můžeme si tuto proměnou představit jako vzálenost míčku od horní hrany obrazovky)<br>
+                    A proměnou pro pohyb míčku vertikálně(na ose Y)</p>
+                <p>Vytvoř funkci která bude mít 3 vstupy(pohyb míčku vertikálně, pozice míčku na ose Y, výška obrazovky(prozatím 10)) a podmínky pro:</p>
+                <p>Míček se odrazí:</p>
+                <p>Pokud je pohyb míčku vertikálně menší jak 0 azároveň vzdálenost míčku menší nebo rovna než 0 (míček je hodně nahoře) nebo</p>
+                <p>Pokud je pohyb míčku vertikálně větší jak 0 azároveň vzdálenost míčku větší nebo rovna než výška obrazovky(prozatím 10) (míček je hodně dole)</p>
+                <p>Odraz zase provedeme vynásobením proměné pro pohyb míčku vertikálně -1 a "vrátíme" ji z funkce pomoí <code>return</code>.
+                </p>
+                <p>Pokud některý z hráčů získá bod, nastav "pozici míčku na ose Y" na 5 (v budoucnu tato hodota bude střed obrazovky)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceXY Míčku je {micek_poziceX}, {micek_poziceY}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 6.0, 5.0<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 7.0, 5.0<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 8.0, 5.0<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 9.0, 5.0<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 10.0, 5.0<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceXY Míčku je 5, 5.0<br>
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="Url"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+
 </ol>
-
-        
-
-<h2>2. Větvení - if-else </h2>
-<p>
-    <!-- Pokud instruujete, jak se má proměnná jmenovat, vymyslete smysluplný název - zde třeba "micek_poziceX", ale názvy proměnných klidně neudávejte -> ať si je žáci vymyslí sami  -->
-    Vytvoř proměnou "Vzálenost" (můžeme si tuto proměnou představit jako vzálenost míčku od levé hrany obrazovky)<br>
-    <br> <!-- br používejte jen tam, kde se skutečně jedná o JEDEN text/odstavec, ve kterém chcete ukončit řádku - tady je spíš lepší udělat každé <p> zvlášť, viz vzorový úkol výše -->
-    Vytvoř podmínky pro:<br>
-    <!-- Pište instrukce popisně - nikoliv "potřebuješ aby" -->
-    Hráč1 získá bod, pokud je vzdálenost míčku větší než 10 (míček je hodně vpravo)<br>
-    a hráč2 získá bod, pokud je vzdálenost míčku menší než 0 (míček je hodně vlevo)<br>
-    pokud některý z hráčů získá bod, nastav vzdálenost na 5<br>
-    <br>
-
-    Správné řešení můžeš otestovat pomocí print:<br>
-    print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a vzdálenost je {Vzalenost}")<br>
-    Treminal:<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-
-    <br><a href="https://www.w3schools.com/python/python_conditions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-
-<h2>3. Cykly - For, range()</h2>
-<p>
-    Vytvoř cyklus(for) který přičte 1 k Vzálenost,  vypočítá a vypíše stav vzdálenosti a bodů (toto celé 15x)<br>
-    <br>
-    Treminal:<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 6<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 7<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 8<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 9<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 10<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 5<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 6<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 7<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 8<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 9<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 10<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 5<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 6<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 7<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 8<br>
-
-
-    <br><a href="https://www.w3schools.com/python/python_for_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-
-
-<h2>4. Vstup</h2>
-<p>
-    <!-- 1) napište jakými klávesami se má hodnota měnit a jak se má měnit"
-    2) Nedává smysl manuálně hýbat míčkem... pro manuální pohyb nechte žáky vytvořit samotného hráče - to asi až o něco později -->
-    Vytvoř Vstup(input) který bude přičítat/odečítat Vzálenost (místo kroku: 3. Cykly - For)<br>
-    <br>
-
-    Treminal:<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-
-    <br><a href="https://www.w3schools.com/python/ref_func_input.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-
-<h2>5. Cykly - while</h2>
-<p>
-    Vytvoř cyklus(while) který poběží dokud jeden z hráčů nebude mít 10 bodů<br>
-    <br>
-
-    Treminal:<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:3 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:4 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:5 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:6 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:7 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:8 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+6<br>
-    Hráč 1 má skóre:9 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-
-    <br><a href="https://www.w3schools.com/python/python_while_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-
-<h2>6. Funkce - Return, Argumenty, Předávání odkazem</h2>
-<p>
-    Přičítání bodů z úkolu 2.(Větvení - if-else) převeď do funkce(s jedním Argumentem(pro body hráče))<br>
-    Při vyvolání funkce, funkce "přičte"(za pomocí Return) body a vypíše je. Funkci voláme pouze tehdy když bude změna.<br>
-    <br>
-    Treminal:<br>
-    Vzdálenost je:5+2<br>
-    Vzdálenost je:7+2<br>
-    Vzdálenost je:9+2<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je:5+-6<br>
-    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a vzdálenost je -1<br>
-
-    <br><a href="https://www.w3schools.com/python/python_functions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-
-<h2>7. Funkce - Předávání hodnotou</h2>
-<p>
-    Resetování vzdálenosti z úkolu 2.(Větvení - if-else) převeď do funkce(s jedním Argumentem(pro konstantu vzdálenosti(5)))<br>
-    Při vyvolání funkce, funkce nastaví(za pomocí Return) Vzdálenost a vypíše ji. Funkci voláme pouze tehdy když bude změna v bodech.<br>
-    <br>
-    Treminal:<br>
-    Vzdálenost je:5+2<br>
-    Vzdálenost je:7+2<br>
-    Vzdálenost je:9+2<br>
-    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a vzdálenost je 11<br>
-    Vzdálenost je 5<br>
-
-    <br><a href="https://www.w3schools.com/python/python_functions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-</p>
-<h2>
-    8. Importace/Instalace knihoven
-</h2>
-<p>
-    K importu knihoven stačí příkaz: import {název_knihovny} <a href="https://www.w3schools.com/python/python_modules.asp"target="_blank">Pokud si nevíš rady -> w3schools</a><br>
-    (nepsané pravidlo je že se píše na 1. řádek ale lze ho napsat kdekoliv před prvním použitím knihovny)<br>
-    Některé knihovny musíte ale nejdříve nainstalovat jako například Pygame<br>
-   
-    
-    Tím se zabívá tento tutorial: <a href="https://www.geeksforgeeks.org/how-to-install-pygame-in-windows/"target="_blank">Geeks For Geeks</a>
-    
-   
-</p>
-
-</body>
-</html>
