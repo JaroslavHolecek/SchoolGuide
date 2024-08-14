@@ -391,51 +391,162 @@
             <h3 class="task_header1">Přidání Pygame</h3>
             <div class="task_assignment">
                 <p>Pro ovládání a grafické rozhraní budeme potřebovat knihovnu Pygame</p>
-                <p>Tu importujeme stejně jako knihovnu random (<code>import pygame</code>) nebo můžeme již existující příkaz <code>import random</code> doplnit na: <code>import random, pygame</code> obě varianty fungují stejně.</p>
-                <p>Náhoda lze v pythonu udělat pomocí knihovny random, tu přidáme tím že napíšeme na první řádek <code>import random</code>.<br></p>
-                <p>Poté potřebujeme knihovnu pygame ještě spustit to uděláme tím že na začtek códu napíšeme <code>pygame.init()</code> standardně se píše na řádek před proměnné ale lze ho napsek kde koliv mezi importu pygame a prvním použitím pygame.</p>
-                <p>Než ale začneme knihovnu pygame používat musíme jí nejprve nainstalovat.</p>
+                <p>Importujeme ji stejně jako knihovnu random (<code>import pygame</code>) nebo můžeme již existující příkaz <code>import random</code> doplnit na: <code>import random, pygame</code> obě varianty fungují stejně.</p>
+                <p>Poté potřebujeme Pygame ještě spustit, a to uděláme tím, že na začátek kódu napíšeme <code>pygame.init()</code> sandardně se píše na řádek před proměnné, ale lze ho napsat kdekoli mezi importem Pygame a prvním použitím Pygame..</p>
+                <p>Než ale začneme Pygame používat, musíme jí nejprve nainstalovat.</p>
             <div class="task_help">
-                <p>Tím se zabívá tento tutorial: <a href="https://www.geeksforgeeks.org/how-to-install-pygame-in-windows/"target="_blank">Geeks For Geeks</a></p>
-                <p><a href="https://www.pygame.org/"target="_blank">Stránky knihovny Pygame</a></p>
+                <p>Tím se zabývá tento tutorial: <a href="https://www.geeksforgeeks.org/how-to-install-pygame-in-windows/"target="_blank">Geeks For Geeks</a></p>
+                <p><a href="https://www.pygame.org/"target="_blank">Stránky Pygame</a></p>
             </div>
-            <h3 class="task_header1">Obraz</h3>
+            <h3 class="task_header1">Okno</h3>
             <div class="task_assignment">
-                <p>Aby pygame vůbec fungovala a zobrazilo se nám okno musíme provéct takzvaný setup, ten napíšeme na jeden z prvních řádků mezi import knihoven a již dříve definované proměnné</p>
+                <p>Aby Pygame vůbec fungovala a zobrazilo se nám okno, musíme provést tzv. setup, ten napíšeme na jeden z prvních řádků mezi import knihoven a již dříve definované proměnné</p>
                 <p>
-                    1. Spustíme knihovnu pygame <code>pygame.init()</code><br>
-                    2. Definujeme rozměry okna, ty už máme definované z předchozích kapitol takže jen přemístíme poměné: Velikost obrazovky X, Velikost obrazovky Y na tento řádek.<br>
-                    3. Tvorba onka, okno je vlastě proměná která je definovaná funkcí z knihovny pygame: <code>pygame.display.set_mode()</code> do proměnné umístíme Velikost obrazovky X a Velikost obrazovky Y jako tuple.<br>
+                    1. Spustíme knihovnu Pygame <code>pygame.init()</code><br>
+                    2. Definujeme rozměry okna, ty už máme definované z předchozích kapitol takže jen přemístíme poměné: Velikost obrazovky X a Velikost obrazovky Y na tento řádek.<br>
+                    3. Tvorba onka, okno je vlastně proměnná která je definovaná funkcí z Pygame: <code>pygame.display.set_mode()</code> do proměnné umístíme Velikost obrazovky X a Velikost obrazovky Y jako tuple.<br>
                     4. Okno by mělo mít nějaký název proto ho pojmenujeme Pong za pomocí příkazu: <code>pygame.display.set_caption("Pong")</code>.<br>
-                    5. Fps (frames per second) rychlost obnovování okna potřebujeme omezit protože bez omezení by se program snažil obnovovat co nejrychleji a zbytečně by zatěžoval počítač standardní hodnoty pro fps jsou 15, 30, 60, 90, 120, 144... pro naše účeli zvolíme hodnotu 60.
-                    6. Pozadí pro pozadí použijeme proměnnou s RGB hodnotou černé barvy (0,0,0)
+                    5. FPS (frames per second), rychlost obnovování okna potřebujeme omezit protože bez omezení by se program snažil obnovovat co nejrychleji a zbytečně by zatěžoval počítač standardní hodnoty pro FPS jsou 15, 30, 60, 90, 120, 144... pro naše účely zvolíme hodnotu 60.
                 </p>
-                <p>Poté co jsme provedli setup můžeme začít přidávat funcke do hlavní smyčky.</p>
+                <p>Poté, co jsme provedli setup, můžeme začít přidávat funkce do hlavní smyčky.</p>
                 <p>
-                    Na začátek smyčky přidáme cyklus for: <code>for event in pygame.event.get():</code><br>
+                    Na začátek smyčky přidáme funkci <code>tick</code>  Pygame a  vložíme do ní jako vstup proměnnou FPS celý příkaz bude vypadat jako <code>pygame.time.Clock().tick(FPS)</code>.
+                    Na další řádek přidáme cyklus for: <code>for event in pygame.event.get():</code><br>
                     Do tohoto cyklu dáme podmínku:<code>if event.type == pygame.QUIT:</code><br>
-                    Když bude podnínka pravdivá tak: <code>pygame.quit()</code> a ukonči hlavní cyklus.
-                </p>
-                <p>
-                    Na proměnnou Okno můžeme navázat funckemi z pygame jako například <code>Okno.fill()</code> nám vyplní okno barvou ktrou volžíme do funkce fill.<br>
-                    Na konec hlavní smyčky přidej funkci co vyplní okno černou barvou<br>
-                    Aby se obrazovka "překreslila" tak musíme použít funkci <code>pygame.display.flip()</code> tuto funkci chceme použít pokaždé co mněníme něco na obrazovce.
-                    A nakonec jak jsme již výše vytvořili proměnnou Fps tak ji vložíme jako vstup do funkce tick() <code>pygame.time.Clock().tick(Fps)</code>.
+                    Když bude podnínka pravdivá tak: <code>pygame.quit()</code> a ukončí hlavní cyklus.
                 </p>
             </div>
             <div class="task_check">
-                <div class="task_check_code">
-                    <p>Po spuštění by se nám mělo zobrazit okno:</p>
-                </div>
                 <div class="task_check_result">
                     <p>Výsledek:</p>
-                    <img src="images/PrvniOkno.PNG" alt="První Okno">
+                    <img src="https://github.com/JaroslavHolecek/SchoolGuide/blob/Python---Pong/images/PrvniOkno.PNG?raw=true" alt="První Okno">
                 </div>
             </div>
             <div class="task_help">
                 <p><a href="https://www.pygame.org/docs/ref/display.html"target="_blank">Pokud si nevíš rady s oknem -> Pygame</a></p>
                 <p><a href="https://www.w3schools.com/Python/python_tuples.asp"target="_blank">Pokud si nevíš rady s tuple -> w3schools</a></p>
             </div>
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Zobrazení míčku a pálek</h2>
+            <div class="task_assignment">
+                <p>Na proměnnou Okno můžeme navázat funkcemi z Pygame jako například <code>Okno.fill()</code> nám vyplní okno barvou ktrou volžíme do funkce fill.</p>
+                <p>
+                    Objeky v Pygame můžeme zobrazovat pomocí funkce <code>draw</code> v Pygame jsou předdefinované základní obrazce jako například: úsečka, obdélník, kruh atd.<br>
+                    Celý příkaz pak například zní: <code>pygame.draw.line()</code>, <code>pygame.draw.rect()</code>, <code>pygame.draw.circle()</code>.<br>
+                    Každý příkaz má vstupy jako: pozici, barvu, velikost atd. podle parametrů daného geometricého oběktu.<br>
+                    Zobrazovací funkce jako <code>fill</code> nebo <code>draw</code> se "přepisují" něco jako kdybychom lepili výstřižky na papír například když nejdříve nakreslím modrý kruh a poté červený čtverec který bude zasahovat do půlky kruhu tak čtvecerec překryje půlku kruhu protože jsme ho nakreslili jako druhý.
+                </p>
+                <p>Aby se obrazovka "překreslila", musíme použít funkci <code>pygame.display.flip()</code> tuto funkci chceme použít pokaždé co měníme něco na obrazovce.</p>
+
+                <p>Vytvoř proměnné pro:<br>
+                    Poloměr míčku = 10<br>
+                    Černou barvu (RGB) = (0,0,0)<br>
+                    Bílou barvu (RGB) = (255,255,255)
+                </p>
+                <p>Vytvoř funkci která:</p>
+                <p>Vyplní okno černou barvou </p>
+                <p>Zobrazí pálku1 v bílé barvě</p>
+                <p>Zobrazí pálku2 v bílé barvě</p>
+                <p>Zobrazí míček v bílé barvě</p>
+                <p>"Obnoví" okno pomocí funkce flip</p>
+                <p>Dávejte si pozor na pořadí a nezapomeňte vyplnit všechny potřebné parametry u funkcí <code>draw</code>.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <img src="https://github.com/JaroslavHolecek/SchoolGuide/blob/Python---Pong/images/Zobrazeni_palek_a_micku.PNG?raw=true" alt="Zobrazení pálek a míčku">
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/draw.html"target="_blank">Pokud si nevíš rady./Výpis všech tvarů pro draw. -> Pygame</a></p>
+                <p><a href="https://cs.wikipedia.org/wiki/RGB"target="_blank">Pokud si nevíš rady s RGB -> wikipedie</a></p>
+            </div>
+            <h3 class="task_header1">Opravení odrazu míčku</h3>
+            <div class="task_assignment">
+                <p>Míček se teď ale odráží nepřesně(pouze jako kdyby měl poloměr 2) protože naše funkce na odraz počítá poze s poloměrem 1.</p>
+                <p>Přidej do funkce na odraz vstup na poloměr míčku a doplň podmínky o:</p>
+                <p>V podmínce <code>if rychlostmíčku < 0 and micekPozice < horníokraj:</code><br>
+                    Odečti od pozice míčku poloměr míčku.
+                </p>
+                <p>A v podmínce <code>elif rychlostmíčku > 0 and micekPozice + micekR > spodníokraj:</code><br>
+                    Přičti k pozici míčku poloměr míčku.
+                </p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Míček by se měl odrážet celým svým povrchem.</p>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_functions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Pohyb pálek</h2>
+            <h3 class="task_header1">Seznam zmáčknutých kláves</h3>
+            <div class="task_assignment">
+                <p>Na to využijeme funkci <code>pygame.key.get_pressed()</code> z Pygame.</p>
+                <p>Tato funkce vrátí seznam všech tlačítek s bool označením (<code>True</code> = zmáčknuto, <code>False</code> = nezmáčknuto)</p>
+                <p>Vytvoř proměnnou ve ktré bude seznam všech tlačítek</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(SeznamKlaves)</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek: (když nedržíme žádnou klávesu, pokud podržíte nějakou klávesu/klávesy, změní se <code>Flase</code> na <code>True</code>)</p>
+                    <code>pygame.key.ScancodeWrapper(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FalsFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FalseFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FalsFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False)</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/key.html"target="_blank">Pokud si nevíš rady -> Pygame</a></p>
+            </div>
+
+            <h3 class="task_header1">Detekce specifické klávesy</h3>
+            <div class="task_assignment">
+                <p>Ze seznamu klaves jde vybrat specifická klávesa, například když potřebujeme zjistit stav klávesy "w" dáme za proměnnou <code>[K_w]</code> (<code>SeznamKlaves[K_w]</code>)</p>
+                <p>Vytvoř podmíku která napíše "w" když stiskneš klávesu w.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>
+                        Když držíme klávesu w tak se "w" vypíše.<br>
+                        Výsledek:
+                    </p>
+                    <code>w<br>w<br>w<br>...</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/key.html"target="_blank">Pokud si nevíš rady -> Pygame</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb pálek</h3>
+            <div class="task_assignment">
+                <p>K ovládání pálek budemme potřebovat 2 klávesy pro každou pálku. doporučuji W/S pro první (<code>K_w</code>, <code>K_s</code>) a šipky nahoru a dolů pro druhou(<code>K_UP</code>, <code>K_DOWN</code>).</p>
+                <p>Vytvoř proměnnou na rychlost pohybu pálek (doporučuji stejnou hodnotu jako u míčku=1).</p>
+                <p>Vytvoř podmínku která odečte rychlost_pálek od pozice pálky1 když: je zmáčknuto "w" a pozice pálky1 je větší jak 0 (pálka není úplně nahoře)</p>
+                <p>Vytvoř podmínku která přičte rychlost_pálek k pozici pálky1 když: je zmáčknuto "s" a pozice pálky1 je menší jak VelikostOknaY - VýškaPálky (pálka není úplně dole)</p>
+                <p>Vytvoř podmínku která odečte rychlost_pálek od pozice pálky2 když: je zmáčknuta šipka nahoru a pozice pálky2 je větší jak 0 (pálka není úplně nahoře)</p>
+                <p>Vytvoř podmínku která přičte rychlost_pálek k pozici pálky2 když: je zmáčknuto šipka dolů a pozice pálky2 je menší jak VelikostOknaY - VýškaPálky (pálka není úplně dole)</p>
+
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <img src="https://github.com/JaroslavHolecek/SchoolGuide/blob/Python---Pong/images/PohybPalek.PNG?raw=true" alt="Pohyb Pálek">
+
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/key.html"target="_blank">Pokud si nevíš rady -> Pygame</a></p>
+            </div>
+
         </div>
     </li>
 </ol>
