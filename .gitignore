@@ -1,1 +1,2 @@
-solution/
+# ignore macOS directory attributes file
+.DS_Store
