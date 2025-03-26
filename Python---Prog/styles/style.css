@@ -3,11 +3,11 @@
 :root {
   --white: #ffffff;
   --black: #000000;
-  --background: #f5f5f5;
-  --blue: #214cad;
+  --background: #fafafa;
   --gray: #858585;
   --dark-gray: #4f4f4f;
   --light-gray: #efefef;
+  --blue: #214cad;
 }
 
 /* PROMENNE */
@@ -30,9 +30,11 @@ body {
 /* ---------HEADER--------- */
 
 header {
+  position: fixed;
   width: 100vw;
   height: 6rem;
   padding: 1rem;
+  z-index: 10;
   background: var(--white);
 }
 
@@ -57,13 +59,14 @@ nav {
   display: inline;
   list-style: none;
   margin-right: 0.5rem;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem;
 }
 
 .nav-links>li>a {
   text-decoration: none;
   color: var(--black);
   font-size: 1.2rem;
+  padding: 0 2.5rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
@@ -73,12 +76,12 @@ nav {
   opacity: 0;
   display: block;
   position: absolute;
-  padding-top: 2rem;
+  padding-top: 3rem;
   list-style: none;
   background: var(--white);
   text-align: center;
-  border-radius: 0 0 0.5rem 0.5rem;
-  transition: all 0.5s ease 0s;
+  border-radius: 0 0 0.75rem 0.75rem;
+  transition: all 0.1s ease 0s;
 }
 
 nav ul li:hover .dropdown-menu {
@@ -193,3 +196,17 @@ li.mobile-links {
 }
 
 /* ---------HEADER--------- */
+
+/* ---------CONTENT--------- */
+
+.content {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  padding: 5rem;
+  padding-top: 11rem;
+  z-index: 1;
+  background-color: var(--white);
+}
+
+/* ---------CONTENT--------- */
