@@ -14,7 +14,6 @@
   <title>SchoolGuide</title>
 
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/code_block.css">
 </head>
 
 <body>
@@ -52,24 +51,22 @@
   <div class="content">
     <h1>test</h1>
     <div class="code-block">
-      <pre>
-        <code>
-          def printNum():
-              x: int = 1
-              y: int = 2
-  
-              z: int = x + y
-  
-              print(z)
-  
-          printNum()
-        </code>
-      </pre>
+<pre><code>def printNum():
+    x: int = 1
+    y: int = 2
+
+    z: int = x + y
+
+    print(z)
+
+printNum()
+</code></pre>
       <div>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <span>TEST_TEST</span>
+        <button class="copy-btn" onclick="copyCode(this)">Kopírovat</button>
+        <span class="copy-message">Zkopírováno!</span>
       </div>
     </div>
+  </div>
 
   <!-- CONTENT -->
 

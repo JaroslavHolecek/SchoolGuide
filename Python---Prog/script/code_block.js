@@ -5,5 +5,16 @@ function copyCode(button) {
     
     navigator.clipboard.writeText(code);
 
-    alert('Code copied to clipboard!');
+    const copyMessage = button.nextElementSibling;
+
+    copyMessage.style.transition = "none";
+    copyMessage.style.opacity = "1";
+
+    setTimeout(() => {
+        copyMessage.style.transition = "opacity 1s ease-in-out";
+    }, 10);
+
+    setTimeout(() => {
+        copyMessage.style.opacity = "0";
+    }, 2000);
 }
