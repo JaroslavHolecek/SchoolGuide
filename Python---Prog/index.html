@@ -14,6 +14,8 @@
   <title>SchoolGuide</title>
 
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style_header.css">
+  <link rel="stylesheet" href="styles/style_content.css">
 </head>
 
 <body>
@@ -23,7 +25,9 @@
     <nav>
       <a href="index.html" class="logo">SCHOOLGUIDE</a>
       <ul class="nav-links">
-        <li><a href="pages/temata.html">Témata</a>
+
+        <li id="dropdown">
+          <a href="pages/temata.html">Témata</a>
           <ul class="dropdown-menu">
             <li><a href="pages/datove_typy_a_promenne.html">Datové typy a proměnné</a></li>
             <li><a href="pages/ridici_struktury.html">Řídící struktury</a></li>
@@ -31,7 +35,9 @@
             <li><a href="pages/algoritmy.html">Algoritmy</a></li>
           </ul>
         </li>
+
         <li><a href="pages/bonus.html">Bonus</a></li>
+
         <li class="mobile-links">
           <a href="#" id="menu-link"><img src="img/menu.png" alt="menu" id="menu"></a>
           <div class="mobile-links-div">
@@ -41,6 +47,7 @@
             </ul>
           </div>
         </li>
+
       </ul>
     </nav>
   </header>
@@ -49,23 +56,35 @@
   <!-- CONTENT -->
 
   <div class="content">
-    <h1>test</h1>
+    <h1>
+      <img src="img/python.png" alt="Logo Python" style="height: 1em; vertical-align: middle;">
+      Python SchoolGuide
+    </h1>
+    <p>Python je jeden z nejpopulárnějších programovacích jazyků. Díky své jednoduché a čitelné syntaxi je skvělou volbou pro začátečníky, ale zároveň se využívá i v profesionální sféře – od webových aplikací přes vědecké výpočty až po umělou inteligenci.</p>
+    <br>
+
+    <p>V tomto návodu se naučíte základy Pythonu a základní algoritmy, které se v informatice běžně používají.</p>
+    <br>
+
+    <p>Většina úloh bude mít šablonu, do které budete vypracovávat váš kód, v podobě bloku kódu:</p>
     <div class="code-block">
-<pre><code>def printNum():
-    x: int = 1
-    y: int = 2
-
-    z: int = x + y
-
-    print(z)
-
-printNum()
+<pre><code>print("Hello World!")
 </code></pre>
       <div>
         <button class="copy-btn" onclick="copyCode(this)">Kopírovat</button>
         <span class="copy-message">Zkopírováno!</span>
       </div>
     </div>
+    <br>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      ↑ Pomocí tohoto tlačítka zkopírujete celý obsah bloku kódu.</p>
+    <br>
+
+    <p>Pokud to bude vhodné, u úlohy budou přiložena testovací data v podobě klíčového slova <code>assert</code> (bude vysvětleno později)</p>
+    <p>O funkci <code>assert</code> pro zájemce:
+      <a href="https://www.geeksforgeeks.org/python-assert-keyword/" target="_blank">assert</a>
+    </p>
   </div>
 
   <!-- CONTENT -->

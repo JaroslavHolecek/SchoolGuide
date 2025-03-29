@@ -1,0 +1,59 @@
+/* -------CODE--BLOCK------- */
+
+.code-block pre {
+  margin: 1rem 0;
+}
+
+.copy-btn {
+  padding: 0.5rem 1rem;
+
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.1s, transform 0.1s;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+  background-color: var(--blue);
+}
+
+.copy-message {
+  margin: 0 2rem;
+
+  color: var(--dark-blue);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* -------CODE--BLOCK------- */
+
+/* ---------CONTENT--------- */
+
+.content {
+  position: relative;
+  margin: 0 auto;
+
+  width: 85%;
+  padding: 5rem;
+  padding-top: 10rem;
+  z-index: 1;
+  
+  background-color: var(--white);
+}
+
+.content p code {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ---------CONTENT--------- */

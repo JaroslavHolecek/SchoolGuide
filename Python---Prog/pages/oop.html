@@ -5,11 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+
   <title>SchoolGuide - OOP</title>
+
   <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/style_header.css">
+  <link rel="stylesheet" href="../styles/style_content.css">
 </head>
 
 <body>
@@ -19,7 +25,9 @@
     <nav>
       <a href="../index.html" class="logo">SCHOOLGUIDE</a>
       <ul class="nav-links">
-        <li><a href="temata.html">Témata</a>
+
+        <li id="dropdown">
+          <a href="temata.html">Témata</a>
           <ul class="dropdown-menu">
             <li><a href="datove_typy_a_promenne.html">Datové typy a proměnné</a></li>
             <li><a href="ridici_struktury.html">Řídící struktury</a></li>
@@ -27,7 +35,9 @@
             <li><a href="algoritmy.html">Algoritmy</a></li>
           </ul>
         </li>
+
         <li><a href="bonus.html">Bonus</a></li>
+
         <li class="mobile-links">
           <a href="#" id="menu-link"><img src="../img/menu.png" alt="menu" id="menu"></a>
           <div class="mobile-links-div">
@@ -37,10 +47,24 @@
             </ul>
           </div>
         </li>
+
       </ul>
     </nav>
   </header>
   <!-- HEADER -->
+
+  <!-- CONTENT -->
+
+  <div class="content">
+    
+  </div>
+
+  <!-- CONTENT -->
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="../script/code_block.js"></script>
 
 </body>
 
