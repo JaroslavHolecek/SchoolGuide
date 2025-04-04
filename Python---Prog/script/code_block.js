@@ -1,7 +1,7 @@
 function copyCode(button) {
-    const codeBlock = button.closest('.code-block');
+    const codeBlock = button.closest(".code-block");
     
-    const code = codeBlock.querySelector('pre code').innerText;
+    const code = codeBlock.querySelector("pre code").innerText;
     
     navigator.clipboard.writeText(code);
 

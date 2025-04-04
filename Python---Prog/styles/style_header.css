@@ -133,11 +133,47 @@ li.mobile-links {
   text-align: center;
 }
 
+#theme-switch {
+  margin: 0 1rem;
+
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+
+  border-radius: 50%;
+  background-color: var(--light-color);
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
+  cursor: pointer;
+  border: none;
+}
+
+#theme-switch svg {
+  fill: var(--dark-color);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: inline;
+}
+
 @media (max-width: 900px) {
   .logo {
     margin: 1rem;
 
     letter-spacing: 0.1rem;
+  }
+
+  .nav-links {
+    display: flex;
+
+    align-items: center;
   }
 
   .nav-links>li {
