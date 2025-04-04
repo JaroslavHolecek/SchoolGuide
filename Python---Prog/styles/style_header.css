@@ -7,8 +7,8 @@ header {
   width: 100vw;
   height: 6rem;
 
-  background: var(--white);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: var(--light-color);
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
 }
 
 nav {
@@ -24,7 +24,7 @@ nav {
   margin: 0 2rem;
 
   text-decoration: none;
-  color: var(--black);
+  color: var(--dark-color);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.15rem;
@@ -51,7 +51,7 @@ nav {
   padding: 2rem 4rem;
 
   text-decoration: none;
-  color: var(--black);
+  color: var(--dark-color);
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -66,11 +66,11 @@ nav {
   display: none;
   position: absolute;
 
-  background: var(--white);
+  background: var(--light-color);
   text-align: center;
   list-style: none;
   border-radius: 0 0 0.75rem 0.75rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
 }
 
 nav ul #dropdown:hover .dropdown-menu {
@@ -88,17 +88,19 @@ nav ul #dropdown:hover .dropdown-menu {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   border-radius: 0.75rem;
-  background: var(--white);
-  color: var(--black);
+  background: var(--light-color);
+  color: var(--dark-color);
   transition: all 0.25s linear 0s;
 }
 
 .dropdown-menu>li>a:hover {
-  background: var(--light-gray);
+  background: var(--hover);
 }
 
 li.mobile-links {
   display: none;
+
+  color: var(--dark-color);
 }
 
 .mobile-links-div {
@@ -108,11 +110,11 @@ li.mobile-links {
   justify-content: center;
   align-items: center;
   top: 6rem;
-  width: 95vw;
+  width: 100vw;
 
   visibility: hidden;
   opacity: 0;
-  background: var(--dark-gray);
+  background: var(--mobile);
   border-radius: 0 0 0.5rem 0.5rem;
   transition: all 0.5s ease 0s;
 }
@@ -126,19 +128,23 @@ li.mobile-links {
   margin: 3rem 0;
 
   text-decoration: none;
-  color: var(--white);
+  color: var(--dark-color);
   font-size: 2rem;
   text-align: center;
 }
 
 @media (max-width: 900px) {
   .logo {
-    margin: 0 0.5rem;
+    margin: 1rem;
 
     letter-spacing: 0.1rem;
   }
 
   .nav-links>li {
+    display: none;
+  }
+
+  #dropdown {
     display: none;
   }
 
@@ -150,12 +156,15 @@ li.mobile-links {
     justify-content: end;
     padding: 0;
     height: 6rem;
+
   }
 
   #menu {
-    margin: 0.4rem 1.25rem 0 0;
-    
     height: 4rem;
+  }
+
+  #menu-link {
+    padding: 1rem 3rem;
   }
 
   .nav-links-mini {
@@ -170,24 +179,6 @@ li.mobile-links {
   .mobile-links-div:hover {
     visibility: visible;
     opacity: 1;
-  }
-}
-
-@media (max-width: 700px) {
-  .mobile-links-div {
-    width: 92vw;
-  }
-}
-
-@media (max-width: 539px) {
-  .mobile-links-div {
-    width: 91vw;
-  }
-}
-
-@media (max-width: 400px) {
-  .mobile-links-div {
-    width: 90.5vw;
   }
 }
 

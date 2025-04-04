@@ -1,14 +1,32 @@
 /* PROMENNE */
 
 :root {
-    --white: #ffffff;
-    --black: #000000;
+    --light-color: #ffffff;
+    --dark-color: #000000;
     --background: #fafafa;
-    --gray: #858585;
-    --dark-gray: #4f4f4f;
-    --light-gray: #efefef;
-    --blue: #214cad;
-    --dark-blue: #142d68;
+    --box-shadow: rgba(0, 0, 0, 0.2);
+
+    --hover: #efefef;
+    --mobile: #b6b6b6;
+
+    --btn-color: #214cad;
+    --btn-color-dark: #142d68;
+}
+
+.darkmode {
+  --light-color: #161625;
+  --dark-color: #ffffff;
+  --background: #131321;
+
+  --hover: #353559;
+  --mobile: #2b2b48;
+
+  --btn-color: #214cad;
+  --btn-color-dark: #326cf5;
+}
+
+.darkmode #menu {
+  filter: invert(1);
 }
 
 /* PROMENNE */

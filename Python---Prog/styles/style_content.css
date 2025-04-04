@@ -7,30 +7,30 @@
 .copy-btn {
   padding: 0.5rem 1rem;
 
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--btn-color);
+  color: var(--light-color);
   border: none;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 0.3rem;
   cursor: pointer;
   transition: background-color 0.1s, transform 0.1s;
-  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.15rem 0.15rem 0.3rem var(--box-shadow);
 }
 
 .copy-btn:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--btn-color-dark);
 }
 
 .copy-btn:active {
   transform: scale(0.95);
-  background-color: var(--blue);
+  background-color: var(--btn-color);
 }
 
 .copy-message {
   margin: 0 2rem;
 
-  color: var(--dark-blue);
+  color: var(--btn-color-dark);
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -48,7 +48,8 @@
   padding-top: 10rem;
   z-index: 1;
   
-  background-color: var(--white);
+  color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
 .content p code {
