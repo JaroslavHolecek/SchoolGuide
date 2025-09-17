@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pong</title>
+</head>
+
+<body>
+
+<h1>Pong</h1>
+<p>
+    K dokončení tohoto kurzu budete potřebovat Python s knihovnami Pygame a Random.
+</p>
+
+<ol>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Skóre hráčů</h2>
+            <div class="task_assignment">
+                <p>Vytvoř proměnné na počítání skóre pro Hráče1 a Hráče2 (číselně).</p>                
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>Hráč 1 má skóre:0 a Hráč 2 má skóre:0</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_variables.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Míček</h2>
+
+            <h3 class="task_header1">Vytvoření míčku</h3>
+            <div class="task_assignment">
+                <p>Vytvoř proměnnou pro pozici míčku na ose X (můžeme si tuto proměnnou představit jako vzdálenost míčku od levé hrany obrazovky)</p>
+                <p>Vytvoř podmínky pro:</p>
+                <p>Hráč1 získá bod, pokud je vzdálenost míčku větší než 10 (míček je hodně vpravo)</p>
+                <p>Hráč2 získá bod, pokud je vzdálenost míčku menší než 0 (míček je hodně vlevo)</p>
+                <p>Pokud některý z hráčů získá bod, nastav "pozici míčku na ose X" na hodnotu 5 (v budoucnu tato hodnota bude střed obrazovky)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 5</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_conditions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb míčku desetkrát</h3>
+            <div class="task_assignment">
+                <p>Vytvoř cyklus(for) který přičte 1 k PoziciX Míčku, vypočítá a vypíše stav vzdálenosti a bodů (toto celé desetkrát)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br></code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_for_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb míčku do nekonečna</h3>
+            <div class="task_assignment">
+                <p>Nahraď cyklus <code>for</code> cyklem <code>while</code></p>
+                <p>Cyklus <code>for</code> má využití pro přesný počet opakování zatímco cyklus <code>while</code> "poběží" dokud bude podmínka platit. Pro naše potřeby bude lepší využít <code>while</code></p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:2 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br>
+                        ...
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_while_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb míčku sem-tam</h3>
+            <div class="task_assignment">
+                <p>Když se míček dostane na jednu stranu tak se odrazí a až pak se vrátí doprostřed.</p>
+                <p>Vytvoříme si proměnnou kterou budem přičítat k PoziciX Míčku (místo toho aby jsme přičítali 1 tak budem přičítat proměnnou s hodnotou 1)<br>
+                    Když se míček dostane na konec tak proměnnou vynásobíme -1 aby se míček po návratu pohyboval opačným směrem.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 4<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 3<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 2<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 1<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 0<br> 
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:1 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:2 a Hráč 2 má skóre:1 a PoziceX Míčku je 5<br>
+                        ...
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+            <h3 class="task_header1">Ukončení programu po dosažení skóre</h3>
+            <div class="task_assignment">
+                <p>Vytvoř smyčku která se ukončí když jeden z hráčů bude mít skóre 20.</p>
+                <p>Této smyčce budeme říkat hlavní protože se v ní bude odehrávat celá hra.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceX Míčku je {micek_poziceX}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 7<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 8<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 9<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceX Míčku je 5<br> 
+                        ...<br>
+                        <br>
+                        ...<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:18 a PoziceX Míčku je 0<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 5<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 6<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 7<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 8<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 9<br>
+                        Hráč 1 má skóre:19 a Hráč 2 má skóre:19 a PoziceX Míčku je 10<br>
+                        Hráč 1 má skóre:20 a Hráč 2 má skóre:19 a PoziceX Míčku je 5<br>
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_while_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Vytvoření 2 osy míčku</h2>
+            <div class="task_assignment">
+                <p>Vytvoř proměnnou pro pozici míčku na ose Y (můžeme si tuto proměnnou představit jako vzdálenost míčku od horní hrany obrazovky)<br>
+                    A proměnnou pro pohyb míčku vertikálně(na ose Y)</p>
+                <p>Vytvoř funkci která bude mít 4 vstupy(pohyb míčku vertikálně, pozice míčku na ose Y, horní okraj obrazovky(prozatím 0), spodní okraj obrazovky(prozatím 10)) a podmínky pro:</p>
+                <p>Míček se odrazí:</p>
+                <p>Pokud je pohyb míčku vertikálně menší než 0 a zároveň je vzdálenost míčku menší nebo rovna hornímu okraji (míček je hodně nahoře) nebo</p>
+                <p>Pokud je pohyb míčku vertikálně větší jak 0 a zároveň je vzdálenost míčku větší nebo rovna spodnímu okraj (míček je hodně dole)</p>
+                <p>Tyto 2 proměnné zamezí tomu aby se míček odrážel mimo obrazovku do nekonečna.</p>
+                <p>Odraz zase provedeme vynásobením proměnné pro pohyb míčku vertikálně -1 a "vrátíme" ji z funkce pomocí <code>return</code>.
+                </p>
+                <p>Pokud některý z hráčů získá bod, nastav "pozici míčku na ose Y" na hodnotu 5 (v budoucnu tato hodnota bude střed obrazovky)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceXY Míčku je {micek_poziceX}, {micek_poziceY}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 6.0, 5.0<br>
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 7.0, 5.0<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 8.0, 5.0<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 9.0, 5.0<br> 
+                        Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 10.0, 5.0<br>
+                        Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceXY Míčku je 5, 5.0<br>
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="Url"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Náhodný pohyb míčku</h2>
+            <div class="task_assignment">
+                <p>Náhoda lze v pythonu udělat pomocí knihovny random, tu přidáme tím že napíšeme na první řádek <code>import random</code>.<br>
+                    (nepsané pravidlo je že se píše na 1. řádek ale lze ho napsat kdekoliv před prvním použitím knihovny)
+                </p>
+                <p>
+                    Funkce knihovny pak používáme tak že napíšeme <code>název_knihovny.název_proměnné()</code> například: <code>random.randint()</code>.
+                </p>
+            </div>
+        </div>
+        <h3 class="task_header1">Funkce pro náhodu</h3>
+        <div class="task_assignment">
+            <p>
+                Náhodný pohyb míčku je potřeba na začátku hry a po každé co se míček vrací na střed.
+            </p>
+            <p>
+                Vytvoř funkci která vrátí hodnotu proměnné pro pohyb míčku vertikálně a horizontálně.
+            </p>
+            <p>
+                Pro výběr hodnoty horizontální (x) využijeme funkci <code>choice</code> do které dáme list s hodnotami 1 a -1.
+            </p>
+            <p>
+                To proto že nechceme aby se míček k brankám pohyboval příliš pomalu a nemuseli jsme na něj čekat.
+            </p>
+            <p>
+                Pro výběr hodnoty vertikální (y) využijeme funkci <code>uniform</code> do které dáme tuple -1, 1.
+            </p>
+            <p>
+                To proto že na ose y nevadí že se míček pohybuje příliš pomalu protože stejně dorazí k brance po ose x.
+            </p>
+        </div>
+        <div class="task_check">
+            <div class="task_check_code">
+                <p>Kód pro ověření:</p>
+                <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceXY Míčku je {micek_poziceX}, {micek_poziceY}")</code>
+            </div>
+            <div class="task_check_result">
+                <p>Výsledek:</p>
+                <code>
+                    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 6.0, 4.305178274591445<br>
+                    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 7.0, 3.6103565491828906<br> 
+                    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 8.0, 2.915534823774336<br>  
+                    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 9.0, 2.2207130983657812<br> 
+                    Hráč 1 má skóre:0 a Hráč 2 má skóre:0 a PoziceXY Míčku je 10.0, 1.5258913729572265<br>
+                    Hráč 1 má skóre:1 a Hráč 2 má skóre:0 a PoziceXY Míčku je 5.0, 5.0<br>
+                    ...<br>
+                    <br>
+                    ...<br>
+                    Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 4.0, 4.4486892801432925<br>
+                    Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 3.0, 3.897378560286585<br>
+                    Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 2.0, 3.3460678404298774<br>
+                    Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 1.0, 2.79475712057317<br>
+                    Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 0.0, 2.2434464007164623<br>
+                    Hráč 1 má skóre:15 a Hráč 2 má skóre:20 a PoziceXY Míčku je 5.0, 5.0<br>
+                </code>
+            </div>
+        </div>
+        <div class="task_help">
+            <p><a href="https://www.w3schools.com/python/module_random.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Pálky</h2>
+            <div class="task_assignment">
+                <p>Doteď jsme k počítání bodů a odrazu používali hodnoty 10, a k vrácení míčku na střed hodnotu 5 </p>
+                <p>Aby se nám s pálkami dobře pracovalo nahraď tyto čísla proměnými</p>
+                <p>
+                    Velikost obrazovky X = 800<br>
+                    Velikost obrazovky Y = 600
+                </p>
+                <p>Velikost obrazovky jsme si zvolili 800/600 jako standardní rozlišení 4:3.</p>
+                <p>Pro střed obrazovky není pořeba proměná protože ten jednoduše vypočítáme jako <code>VelikostObrazovky // 2</code>.</p>
+                <p>K vytvoření pálek nám prozatím bude stačit jejch výška, šířka a pozice (od horního okraje obrazovnky)</p>
+                <p>Vytvoř proměnné pro výška a pozici pálky</p>
+                <p>
+                    Výška pálky by měla být cca <code>VelikostObrazovkyY // 6</code> = 100 ale můžete jí zvolit libovolně<br>
+                    Šířka pálky by měla být cca <code>VelikostObrazovkyX // 80</code> = 10 ale můžete jí zvolit libovolně<br>
+                    Začáteční pozice Y pálky by měla být v půlce obrazovky <code>(VelikostObrazovkyY - VyskaPalky) // 2</code> = 250<br>
+                </p>
+                <p>Pro pozici pálky X není potřeba proměná protože to bude konstanta použita pouze 1x (<code>Palka1 = 0</code> a <code>Palka2 = VelikostObrazovkyX - SirkaPalky</code>)</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>
+                        print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceXY Míčku je {micek_poziceX}, {micek_poziceY}, PoziceY Pálky1 je {Palka1}, PoziceY Pálky2 je {Palka2}, Výška a šířka pálek je {VyskaPalky}, {SirkaPalky}")
+                    </code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:13 a Hráč 2 má skóre:19 a PoziceXY Míčku je 581.0, 244.82422972390592, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:13 a Hráč 2 má skóre:19 a PoziceXY Míčku je 582.0, 244.51939121409322, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:13 a Hráč 2 má skóre:19 a PoziceXY Míčku je 583.0, 244.21455270428052, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:13 a Hráč 2 má skóre:19 a PoziceXY Míčku je 584.0, 243.90971419446782, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:13 a Hráč 2 má skóre:19 a PoziceXY Míčku je 585.0, 243.60487568465513, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        ...<br><br>...<br>
+                        Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 3.0, 339.285153538946, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 2.0, 339.3841085856436, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 1.0, 339.4830636323412, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:15 a Hráč 2 má skóre:19 a PoziceXY Míčku je 0.0, 339.5820186790388, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:15 a Hráč 2 má skóre:20 a PoziceXY Míčku je 400.0, 300.0, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_variables.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+            <h3 class="task_header1">Podmínky pro pálky</h3>
+            <div class="task_assignment">
+                <p>Když se míček dotkne pálky je potřeba aby se odrazil.</p>
+                <p>Vytvoř cyklus (for) který zkontroluje jestli se míček nedotýká jedné z pálek a když jo tak ho odrazí.</p>
+                <p>1. vytvoř proměnnou (list) do kterého před cyklem for načteme hodnotu pro pozici pálky1 a pálky2.</p>
+                <p>2. Vytvoř cyklus for který pro každou pálku z předchozího listu zkontroluje:</p>
+                <p>3. Jestli: Pozice_míčku_na_ose_Y >= pálka a zároveň Pozice_míčku_na_ose_Y <= palka + VýskaPálky:</p>
+                <p>4. Když ano tak: Proměná na pohyb míčku vertikálně = funkce pro odraz z kapitoly "Vytvoření 2 osy míčku" kde jsou vstupy: 4 vstupy(pohyb míčku vertikálně, pozice míčku na ose Y, horní okraj obrazovky, spodní okraj obrazovky)<br>
+                    do vstupů dáme proměnné: pohyb míčku vertikálně => pohyb míčku horizontálně, pozice míčku na ose Y => pozice míčku na ose X, horní okraj obrazovky => Šířka pálky, spodní okraj obrazovky => velikost obrazovky X - Šířka pálky
+                </p>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(f"Hráč 1 má skóre:{Hrac1Skore} a Hráč 2 má skóre:{Hrac2Skore} a PoziceXY Míčku je {micek_poziceX}, {micek_poziceY}, PoziceY Pálky1 je {Palka1}, PoziceY Pálky2 je {Palka2}, Výška a šířka pálek je {VyskaPalky}, {SirkaPalky}")</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <code>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 574.0, 279.69622234377266, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 575.0, 279.579533966438, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        ...<br><br>...<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 789.0, 254.6082212168251, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 790.0, 254.49153283949045, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 791.0, 254.3748444621558, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 790.0, 254.25815608482117, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 789.0, 254.14146770748653, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        ...<br><br>...<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:19 a PoziceXY Míčku je 0.0, 162.07433799045566, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                        Hráč 1 má skóre:18 a Hráč 2 má skóre:20 a PoziceXY Míčku je 400.0, 300.0, PoziceY Pálky1 je 250, PoziceY Pálky2 je 250, Výška a šířka pálek je 100, 10<br>
+                    </code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_for_loops.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Pygame, Obraz</h2>
+            <h3 class="task_header1">Přidání Pygame</h3>
+            <div class="task_assignment">
+                <p>Pro ovládání a grafické rozhraní budeme potřebovat knihovnu Pygame</p>
+                <p>Importujeme ji stejně jako knihovnu random (<code>import pygame</code>) nebo můžeme již existující příkaz <code>import random</code> doplnit na: <code>import random, pygame</code> obě varianty fungují stejně.</p>
+                <p>Poté potřebujeme Pygame ještě spustit, a to uděláme tím, že na začátek kódu napíšeme <code>pygame.init()</code> sandardně se píše na řádek před proměnné, ale lze ho napsat kdekoli mezi importem Pygame a prvním použitím Pygame..</p>
+                <p>Než ale začneme Pygame používat, musíme jí nejprve nainstalovat.</p>
+            <div class="task_help">
+                <p>Tím se zabývá tento tutorial: <a href="https://www.geeksforgeeks.org/how-to-install-pygame-in-windows/"target="_blank">Geeks For Geeks</a></p>
+                <p><a href="https://www.pygame.org/"target="_blank">Stránky Pygame</a></p>
+            </div>
+            <h3 class="task_header1">Okno</h3>
+            <div class="task_assignment">
+                <p>Aby Pygame vůbec fungovala a zobrazilo se nám okno, musíme provést tzv. setup, ten napíšeme na jeden z prvních řádků mezi import knihoven a již dříve definované proměnné</p>
+                <p>
+                    1. Spustíme knihovnu Pygame <code>pygame.init()</code><br>
+                    2. Definujeme rozměry okna, ty už máme definované z předchozích kapitol takže jen přemístíme poměné: Velikost obrazovky X a Velikost obrazovky Y na tento řádek.<br>
+                    3. Tvorba onka, okno je vlastně proměnná která je definovaná funkcí z Pygame: <code>pygame.display.set_mode()</code> do proměnné umístíme Velikost obrazovky X a Velikost obrazovky Y jako tuple.<br>
+                    4. Okno by mělo mít nějaký název proto ho pojmenujeme Pong za pomocí příkazu: <code>pygame.display.set_caption("Pong")</code>.<br>
+                    5. FPS (frames per second), rychlost obnovování okna potřebujeme omezit protože bez omezení by se program snažil obnovovat co nejrychleji a zbytečně by zatěžoval počítač standardní hodnoty pro FPS jsou 15, 30, 60, 90, 120, 144... pro naše účely zvolíme hodnotu 60.
+                </p>
+                <p>Poté, co jsme provedli setup, můžeme začít přidávat funkce do hlavní smyčky.</p>
+                <p>
+                    Na začátek smyčky přidáme funkci <code>tick</code>  Pygame a  vložíme do ní jako vstup proměnnou FPS celý příkaz bude vypadat jako <code>pygame.time.Clock().tick(FPS)</code>.
+                    Na další řádek přidáme cyklus for: <code>for event in pygame.event.get():</code><br>
+                    Do tohoto cyklu dáme podmínku:<code>if event.type == pygame.QUIT:</code><br>
+                    Když bude podnínka pravdivá tak: <code>pygame.quit()</code> a ukončí hlavní cyklus.
+                </p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <img src="https://github.com/JaroslavHolecek/SchoolGuide/blob/Python---Pong/images/PrvniOkno.PNG?raw=true" alt="První Okno">
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/display.html"target="_blank">Pokud si nevíš rady s oknem -> Pygame</a></p>
+                <p><a href="https://www.w3schools.com/Python/python_tuples.asp"target="_blank">Pokud si nevíš rady s tuple -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Zobrazení míčku a pálek</h2>
+            <div class="task_assignment">
+                <p>Na proměnnou Okno můžeme navázat funkcemi z Pygame jako například <code>Okno.fill()</code> nám vyplní okno barvou ktrou volžíme do funkce fill.</p>
+                <p>
+                    Objeky v Pygame můžeme zobrazovat pomocí funkce <code>draw</code> v Pygame jsou předdefinované základní obrazce jako například: úsečka, obdélník, kruh atd.<br>
+                    Celý příkaz pak například zní: <code>pygame.draw.line()</code>, <code>pygame.draw.rect()</code>, <code>pygame.draw.circle()</code>.<br>
+                    Každý příkaz má vstupy jako: pozici, barvu, velikost atd. podle parametrů daného geometricého oběktu.<br>
+                    Zobrazovací funkce jako <code>fill</code> nebo <code>draw</code> se "přepisují" něco jako kdybychom lepili výstřižky na papír například když nejdříve nakreslím modrý kruh a poté červený čtverec který bude zasahovat do půlky kruhu tak čtvecerec překryje půlku kruhu protože jsme ho nakreslili jako druhý.
+                </p>
+                <p>Aby se obrazovka "překreslila", musíme použít funkci <code>pygame.display.flip()</code> tuto funkci chceme použít pokaždé co měníme něco na obrazovce.</p>
+
+                <p>Vytvoř proměnné pro:<br>
+                    Poloměr míčku = 10<br>
+                    Černou barvu (RGB) = (0,0,0)<br>
+                    Bílou barvu (RGB) = (255,255,255)
+                </p>
+                <p>Vytvoř funkci která:</p>
+                <p>Vyplní okno černou barvou </p>
+                <p>Zobrazí pálku1 v bílé barvě</p>
+                <p>Zobrazí pálku2 v bílé barvě</p>
+                <p>Zobrazí míček v bílé barvě</p>
+                <p>"Obnoví" okno pomocí funkce flip</p>
+                <p>Dávejte si pozor na pořadí a nezapomeňte vyplnit všechny potřebné parametry u funkcí <code>draw</code>.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <img src="https://github.com/JaroslavHolecek/SchoolGuide/blob/Python---Pong/images/Zobrazeni_palek_a_micku.PNG?raw=true" alt="Zobrazení pálek a míčku">
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/draw.html"target="_blank">Pokud si nevíš rady./Výpis všech tvarů pro draw. -> Pygame</a></p>
+                <p><a href="https://cs.wikipedia.org/wiki/RGB"target="_blank">Pokud si nevíš rady s RGB -> wikipedie</a></p>
+            </div>
+            <h3 class="task_header1">Opravení odrazu míčku</h3>
+            <div class="task_assignment">
+                <p>Míček se teď ale odráží nepřesně(pouze jako kdyby měl poloměr 2) protože naše funkce na odraz počítá poze s poloměrem 1.</p>
+                <p>Přidej do funkce na odraz vstup na poloměr míčku a doplň podmínky o:</p>
+                <p>V podmínce <code>if rychlostmíčku < 0 and micekPozice < horníokraj:</code><br>
+                    Odečti od pozice míčku poloměr míčku.
+                </p>
+                <p>A v podmínce <code>elif rychlostmíčku > 0 and micekPozice + micekR > spodníokraj:</code><br>
+                    Přičti k pozici míčku poloměr míčku.
+                </p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Míček by se měl odrážet celým svým povrchem.</p>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.w3schools.com/python/python_functions.asp"target="_blank">Pokud si nevíš rady -> w3schools</a></p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="task_container">
+            <h2 class="task_header">Pohyb pálek</h2>
+            <h3 class="task_header1">Seznam zmáčknutých kláves</h3>
+            <div class="task_assignment">
+                <p>Na to využijeme funkci <code>pygame.key.get_pressed()</code> z Pygame.</p>
+                <p>Tato funkce vrátí seznam všech tlačítek s bool označením (<code>True</code> = zmáčknuto, <code>False</code> = nezmáčknuto)</p>
+                <p>Vytvoř proměnnou ve ktré bude seznam všech tlačítek</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_code">
+                    <p>Kód pro ověření:</p>
+                    <code>print(SeznamKlaves)</code>
+                </div>
+                <div class="task_check_result">
+                    <p>Výsledek: (když nedržíme žádnou klávesu, pokud podržíte nějakou klávesu/klávesy, změní se <code>Flase</code> na <code>True</code>)</p>
+                    <code>pygame.key.ScancodeWrapper(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FalsFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FalseFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, FalsFalse, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False)</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/key.html"target="_blank">Pokud si nevíš rady -> Pygame</a></p>
+            </div>
+
+            <h3 class="task_header1">Detekce specifické klávesy</h3>
+            <div class="task_assignment">
+                <p>Ze seznamu klaves jde vybrat specifická klávesa, například když potřebujeme zjistit stav klávesy "w" dáme za proměnnou <code>[K_w]</code> (<code>SeznamKlaves[K_w]</code>)</p>
+                <p>Vytvoř podmíku která napíše "w" když stiskneš klávesu w.</p>
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>
+                        Když držíme klávesu w tak se "w" vypíše.<br>
+                        Výsledek:
+                    </p>
+                    <code>w<br>w<br>w<br>...</code>
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/key.html"target="_blank">Pokud si nevíš rady -> Pygame</a></p>
+            </div>
+
+            <h3 class="task_header1">Pohyb pálek</h3>
+            <div class="task_assignment">
+                <p>K ovládání pálek budemme potřebovat 2 klávesy pro každou pálku. doporučuji W/S pro první (<code>K_w</code>, <code>K_s</code>) a šipky nahoru a dolů pro druhou(<code>K_UP</code>, <code>K_DOWN</code>).</p>
+                <p>Vytvoř proměnnou na rychlost pohybu pálek (doporučuji stejnou hodnotu jako u míčku=1).</p>
+                <p>Vytvoř podmínky:</p>
+                <p>když je zmáčknuto "w" tak se pálk1 posune nahoru</p>
+                <p>když je zmáčknuto "s" tak se pálk1 posune</p>
+                <p>když je zmáčknuta šipka nahoru tak se pálk2 posune</p>
+                <p>když je zmáčknuta šipka dolů tak se pálk2 posune</p>
+
+            </div>
+            <div class="task_check">
+                <div class="task_check_result">
+                    <p>Výsledek:</p>
+                    <img src="https://github.com/JaroslavHolecek/SchoolGuide/blob/Python---Pong/images/PohybPalek.PNG?raw=true" alt="Pohyb Pálek">
+
+                </div>
+            </div>
+            <div class="task_help">
+                <p><a href="https://www.pygame.org/docs/ref/key.html"target="_blank">Pokud si nevíš rady -> Pygame</a></p>
+            </div>
+
+        </div>
+    </li>
+</ol>
