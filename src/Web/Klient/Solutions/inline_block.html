@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Základní styl převzatý z předchozích úkolů */
+        body {
+            font-family: Copperplate, sans-serif;
+        }
+        h1 {
+            background-color: #4CAF50;
+        }
+        p {
+            color: #333333;
+        }
+        ul {
+            background-color: #f0f0f0;
+            list-style-type: square;
+        }
+        ol {
+            color: #0044cc;
+            text-align: center;
+        }
+        a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+        img {
+            width: 300px;
+        }
+
+        #akce {
+            background-color: #e0f7da;
+            border-left: 5px solid #4CAF50;
+            padding-left: 10px;
+        }
+        .zvyrazneny {
+            background-color: #f8ed75;
+            font-style: italic;
+        }
+
+        /* Rozvržení stránky – zaoblené rohy a pozadí */
+        header, nav, section, footer {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        nav {
+            background-color: #d9ffa3;
+            text-align: center;
+        }
+        section {
+            background-color: #939393;
+        }
+        footer {
+            background-color: #cccccc;
+            text-align: center;
+        }
+
+        /* --- Nové úpravy: inline-block prvky --- */
+        nav span {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 12px;
+            background-color: #e0f7da;
+            border-radius: 6px;
+        }
+
+        nav span:hover {
+            background-color: #bfffbf;
+        }
+
+        .obrazek-blok {
+            display: inline-block;
+            margin: 10px;
+            background-color: #d9ffa3;
+            padding: 5px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Stránka třídy ABC</h1>
+    </header>
+
+    <nav>
+        <span><a href="#skola">O škole</a></span>
+        <span><a href="#trida">Třída</a></span>
+        <span><a href="#predmety">Předměty</a></span>
+        <span><a href="#zaci">Žáci</a></span>
+        <span><a href="#akce">Akce</a></span>
+        <span><a href="#ucitele">Učitelé</a></span>
+        <span><a href="#obrazky">Obrázky</a></span>
+    </nav>
+
+    <section id="skola">
+        <h2>Škola</h2>
+        <p class="zvyrazneny">Střední průmyslová škola SPŠ a VOŠ Kladno je jediná kladenská průmyslová škola, na které jsou obory Informační technologie, Elektrotechnika a Strojírenství.</p>
+        <p>Škola má dlouholetou tradici a moderní vybavení.</p>
+    </section>
+
+    <section id="trida">
+        <h2>Třída</h2>
+        <p class="zvyrazneny">Naše třída studuje čtyřletý maturitní obor Elektrotechnika – Elektronické počítačové systémy a nastoupila v roce 2025.</p>
+        <p>Třída se skládá ze 30 žáků, kteří se zajímají o moderní technologie a programování.</p>
+    </section>
+
+    <section id="predmety">
+        <h2>Předměty</h2>
+        <p>Mezi hlavní předměty patří: matematika, fyzika, programování, elektronické počítačové systémy a další.</p>
+    </section>
+
+    <section id="zaci">
+        <h2>Žáci</h2>
+        <ul>
+            <li>Jan Novák</li>
+            <li>Petra Svobodová</li>
+            <li>Martin Dvořák</li>
+            <li>Lucie Malá</li>
+        </ul>
+    </section>
+
+    <section id="akce">
+        <h2>Akce třídy</h2>
+        <ol>
+            <li>Školní výlet do Krkonoš</li>
+            <li>Exkurze do technického muzea</li>
+            <li>Projektový den o obnovitelných zdrojích</li>
+            <li>Sportovní soutěž mezi třídami</li>
+        </ol>
+    </section>
+
+    <section id="ucitele">
+        <h2>Učitelé</h2>
+        <p>Na škole působí učitelé jak na plný úvazek, tak i mnoho externistů, kteří pracují v oboru nebo obor studují na vysoké škole.</p>
+
+        <div id="ucitele-blok">
+            <p>Obzvláště na průmyslové škole je důležité propojení školy s praxí, a proto se neváhejte, stejně jako mnoho učitelů, pustit do skutečných projektů a pokuste se vytvořit skutečně funkční „věc“ – ať už v rámci předmětu Programování funkční program, nebo v jiném předmětu fyzické zařízení (svítilnu, dron apod.).</p>
+        </div>
+
+        <p>Při tvorbě čehokoliv skutečného získáte neocenitelné zkušenosti a zjistíte, že svět není tak jednoduchý, jak si jej možná představujete.</p>
+    </section>
+
+    <section id="obrazky">
+        <h2>Obrázky školy</h2>
+        <div class="obrazek-blok">
+            <img src="https://new.spskladno.cz/wp-content/uploads/2021/08/sps-kladno-9.jpg" alt="Budova školy">
+        </div>
+        <div class="obrazek-blok">
+            <img src="https://new.spskladno.cz/wp-content/uploads/2021/08/sps-kladno-1.jpg" alt="Workoutové hřiště">
+        </div>
+        <div class="obrazek-blok">
+            <img src="https://new.spskladno.cz/wp-content/uploads/2020/08/vos-sps-kladno-logo-5.png" alt="Logo školy 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Třída ABC • Poslední úprava: říjen 2025</p>
+    </footer>
+</body>
+</html>

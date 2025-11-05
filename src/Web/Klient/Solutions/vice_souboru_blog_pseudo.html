@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Stránka třídy ABC – učesání</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Základní sjednocení vzhledu – zelené tónování */
+        :root {
+            /* odstíny zelené pro konzistentní paletu */
+            --green-main: #2e7d32;   /* tmavší pro hlavičku a akcenty */
+            --green-accent: #4CAF50; /* střední akcent (používaný dříve) */
+            --green-soft: #e7f7e8;   /* velmi světlé pozadí sekcí */
+            --green-chip: #d9ffa3;   /* světle zelená pro drobné zvýraznění */
+            --text-main: #2b2b2b;
+            --text-muted: #333333;
+            --link: #cc0000;
+            --link-hover: #ff6600;
+            --panel: #f1f8f2;
+            --border: #b9e2bd;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Copperplate, sans-serif;
+            color: var(--text-main);
+            background-color: var(--green-soft);
+            line-height: 1.55;
+        }
+
+        /* Obal pro čitelné řádky a konzistentní odsazení */
+        .wrapper {
+            width: 95%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Hlavička */
+        header {
+            background-color: var(--green-main);
+            color: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.25rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.75rem;
+        }
+
+        /* Navigace */
+        nav {
+            background-color: var(--panel);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 1rem 0 1.25rem 0;
+            text-align: center;
+        }
+        nav span {
+            display: inline-block;
+            margin: 0.375rem 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+        }
+        nav span:hover {
+            background-color: var(--green-chip);
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* Pseudotřídy pro navigační menu */
+        nav span a:hover {
+            color: var(--green-main);
+            font-weight: bold;
+        }
+
+        nav span a:visited {
+            color: var(--text-muted);
+        }
+
+        nav span a:active {
+            color: var(--link);
+            transform: scale(0.95);
+        }
+
+        /* Pseudoelementy pro dekorativní prvky */
+        article p:first-of-type::first-letter {
+            font-size: 3em;
+            float: left;
+            line-height: 0.8;
+            margin: 0.1em 0.1em 0 0;
+            color: var(--green-main);
+            font-weight: bold;
+        }
+
+        article p::selection {
+            background-color: var(--green-chip);
+            color: var(--green-main);
+        }
+
+        /* article p::-moz-selection {
+            background-color: var(--green-chip);
+            color: var(--green-main);
+        } */
+
+        /* Blog – sjednocené panely */
+        section#blog {
+            background-color: var(--green-chip);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 0.875rem 1rem;
+            margin: 1rem 0;
+        }
+
+        section#blog h2 {
+            margin: 0.375rem 0 0.625rem 0;
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--green-main);
+        }
+
+        article {
+            background-color: #ffffff;
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 0.875rem 1rem;
+            margin: 1rem 0;
+        }
+        article h2 {
+            margin: 0.375rem 0 0.625rem 0;
+            font-size: 1.375rem;
+            color: var(--green-main);
+            border-left: 6px solid var(--green-accent);
+            padding-left: 0.625rem;
+        }
+        article p {
+            color: var(--text-muted);
+            margin: 0.5rem 0;
+        }
+
+        article img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+        /* Zvýrazněné odstavce z dřívějška – jemně sjednocené */
+        .zvyrazneny {
+            background-color: var(--green-chip);
+            font-style: italic;
+            padding: 0.375rem 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Původní „akce“ s levou lištou – zachováno, barevně sjednoceno */
+        #akce {
+            background-color: #ffffff;
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 0.875rem 1rem;
+            margin: 1.25rem 0 0.625rem 0;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        footer .meta {
+            display: inline-block;
+            margin: 0.25rem 0.5rem;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Stránka třídy ABC</h1>
+        </header>
+
+        <nav>
+            <span><a href="vice_souboru.html#skola">O škole</a></span>
+            <span><a href="vice_souboru.html#trida">Třída</a></span>
+            <span><a href="vice_souboru.html#predmety">Předměty</a></span>
+            <span><a href="vice_souboru.html#zaci">Žáci</a></span>
+            <span><a href="vice_souboru.html#akce">Akce</a></span>
+            <span><a href="vice_souboru.html#ucitele">Učitelé</a></span>
+            <span><a href="vice_souboru.html#tabulky">Tabulky</a></span>
+            <span><a href="vice_souboru.html#obrazky">Obrázky</a></span>
+            <span><a href="vice_souboru_blog.html">Blog</a></span>
+            <span><a href="vice_souboru_blog_pseudo.html">Pseudo</a></span>
+        </nav>
+
+        <section id="blog">
+            <h2>Blog třídy ABC - s pseudo elementy<br>Položky v menu a označený text se chovají jinak</h2>
+
+            <article>
+                <h2>A jsou rozdělené do více souborů!</h2>
+                <p>Povšimněte si, že titulní strana a strana s články jsou dva různé soubory.</p>
+                <p>V navigačním menu pak můžete přecházet mezi jednotlivými stránkami/soubory.</p>
+            </article>
+            
+            <article>
+                <h2>Máme webové stránky!</h2>
+                <p>Právě se nám podařilo zprovoznit naše webové stránky třídy ABC. Najdete zde informace o našich projektech, akcích a dalších zajímavostech.</p>
+                <p>Adresu stránek pravděpodobně znáte, neboť se na nich právě nacházíte.</p>
+                <img src="https://new.spskladno.cz/wp-content/uploads/2021/08/sps-kladno-1.jpg" alt="Náhodný obrázek pro první článek">
+            </article>
+
+
+        </section>
+
+        <footer>
+            <div class="meta">Autor: Jaroslav Holeček</div>
+            <div class="meta">Kontakt: <a href="mailto:holecek.jaroslav (však vy víte co) email.cz">holecek.jaroslav (však vy víte co) email.cz</a></div>
+            <div class="meta">© 2025 Třída ABC • Poslední úprava: říjen 2025</div>
+        </footer>
+    </div>
+</body>
+</html>

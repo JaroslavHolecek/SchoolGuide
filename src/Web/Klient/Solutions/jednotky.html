@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Stránka třídy ABC – učesání</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Základní sjednocení vzhledu – zelené tónování */
+        :root {
+            /* odstíny zelené pro konzistentní paletu */
+            --green-main: #2e7d32;   /* tmavší pro hlavičku a akcenty */
+            --green-accent: #4CAF50; /* střední akcent (používaný dříve) */
+            --green-soft: #e7f7e8;   /* velmi světlé pozadí sekcí */
+            --green-chip: #d9ffa3;   /* světle zelená pro drobné zvýraznění */
+            --text-main: #2b2b2b;
+            --text-muted: #333333;
+            --link: #cc0000;
+            --link-hover: #ff6600;
+            --panel: #f1f8f2;
+            --border: #b9e2bd;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Copperplate, sans-serif;
+            color: var(--text-main);
+            background-color: var(--green-soft);
+            line-height: 1.55;
+        }
+
+        /* Obal pro čitelné řádky a konzistentní odsazení */
+        .wrapper {
+            width: 95%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Hlavička */
+        header {
+            background-color: var(--green-main);
+            color: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.25rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.75rem;
+        }
+
+        /* Navigace */
+        nav {
+            background-color: var(--panel);
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 1rem 0 1.25rem 0;
+            text-align: center;
+        }
+        nav span {
+            display: inline-block;
+            margin: 0.375rem 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+        }
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* Sekce – sjednocené panely */
+        section {
+            background-color: #ffffff;
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 0.875rem 1rem;
+            margin: 1rem 0;
+        }
+        section h2 {
+            margin: 0.375rem 0 0.625rem 0;
+            font-size: 1.375rem;
+            color: var(--green-main);
+            border-left: 6px solid var(--green-accent);
+            padding-left: 0.625rem;
+        }
+        p {
+            color: var(--text-muted);
+            margin: 0.5rem 0;
+        }
+
+        /* Zvýrazněné odstavce z dřívějška – jemně sjednocené */
+        .zvyrazneny {
+            background-color: var(--green-chip);
+            font-style: italic;
+            padding: 0.375rem 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Původní „akce“ s levou lištou – zachováno, barevně sjednoceno */
+        #akce {
+            background-color: #ffffff;
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 0.875rem 1rem;
+        }
+        #akce h2 {
+            border-left-color: var(--green-accent);
+        }
+        /* Vložená levá lišta pro soulad s dřívějším stylem */
+        #akce > ol {
+            margin: 0.5rem 0 0 0;
+            color: #0044cc;
+            text-align: center;
+        }
+
+        /* Obrázky vedle sebe – inline-block, sjednocená velikost a okraje */
+        .obrazek-blok {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            margin: 0.5rem;
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 0.625rem;
+            padding: 0.5rem;
+        }
+        .obrazek-blok img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.5rem;
+        }
+
+        /* Učitelé – ukázkový box z dřívějška, sjednocené okraje */
+        #ucitele-blok {
+            background-color: var(--panel);
+            border: 2px solid var(--border);
+            border-left: 6px solid var(--green-accent);
+            padding: 0.75rem 1rem 0.875rem 1rem;
+            margin: 0.875rem 0.625rem 1.125rem 0.625rem;
+            border-radius: 0.625rem;
+        }
+
+        /* Seznamy – jemné sjednocení vzhledu */
+        ul {
+            background-color: #ffffff;
+            list-style-type: square;
+            padding: 0.5rem 1.5rem;
+            margin: 0.375rem 0 0 0;
+        }
+        ol {
+            color: #0044cc;
+            text-align: left; /* sjednocení – seznamy vlevo pro čitelnost */
+            padding-left: 1.5rem;
+            margin: 0.375rem 0 0 0;
+        }
+
+        /* Zápatí s kontaktem a autorem */
+        footer {
+            background-color: #ffffff;
+            border: 2px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 0.875rem 1rem;
+            margin: 1.25rem 0 0.625rem 0;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        footer .meta {
+            display: inline-block;
+            margin: 0.25rem 0.5rem;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Stránka třídy ABC</h1>
+        </header>
+
+        <nav>
+            <span><a href="#skola">O škole</a></span>
+            <span><a href="#trida">Třída</a></span>
+            <span><a href="#predmety">Předměty</a></span>
+            <span><a href="#zaci">Žáci</a></span>
+            <span><a href="#akce">Akce</a></span>
+            <span><a href="#ucitele">Učitelé</a></span>
+            <span><a href="#obrazky">Obrázky</a></span>
+        </nav>
+
+        <section id="skola">
+            <h2>Škola</h2>
+            <p class="zvyrazneny">Střední průmyslová škola SPŠ a VOŠ Kladno je jediná kladenská průmyslová škola, na které jsou obory Informační technologie, Elektrotechnika a Strojírenství.</p>
+            <p>Škola má dlouholetou tradici a moderní vybavení.</p>
+        </section>
+
+        <section id="trida">
+            <h2>Třída</h2>
+            <p class="zvyrazneny">Naše třída studuje čtyřletý maturitní obor Elektrotechnika – Elektronické počítačové systémy a nastoupila v roce 2025.</p>
+            <p>Třída se skládá ze 30 žáků, kteří se zajímají o moderní technologie a programování.</p>
+        </section>
+
+        <section id="predmety">
+            <h2>Předměty</h2>
+            <p>Mezi hlavní předměty patří: matematika, fyzika, programování, elektronické počítačové systémy a další.</p>
+        </section>
+
+        <section id="zaci">
+            <h2>Žáci</h2>
+            <ul>
+                <li>Jan Novák</li>
+                <li>Petra Svobodová</li>
+                <li>Martin Dvořák</li>
+                <li>Lucie Malá</li>
+            </ul>
+        </section>
+
+        <section id="akce">
+            <h2>Akce třídy</h2>
+            <ol>
+                <li>Školní výlet do Krkonoš</li>
+                <li>Exkurze do technického muzea</li>
+                <li>Projektový den o obnovitelných zdrojích</li>
+                <li>Sportovní soutěž mezi třídami</li>
+            </ol>
+        </section>
+
+        <section id="ucitele">
+            <h2>Učitelé</h2>
+            <p>Na škole působí učitelé jak na plný úvazek, tak i mnoho externistů, kteří pracují v oboru nebo obor studují na vysoké škole.</p>
+
+            <div id="ucitele-blok">
+                <p>Obzvláště na průmyslové škole je důležité propojení školy s praxí, a proto se neváhejte, stejně jako mnoho učitelů, pustit do skutečných projektů a pokuste se vytvořit skutečně funkční „věc“ – ať už v rámci předmětu Programování funkční program, nebo v jiném předmětu fyzické zařízení (svítilnu, dron apod.).</p>
+            </div>
+
+            <p>Při tvorbě čehokoliv skutečného získáte neocenitelné zkušenosti a zjistíte, že svět není tak jednoduchý, jak si jej možná představujete.</p>
+        </section>
+
+        <section id="obrazky">
+            <h2>Obrázky školy</h2>
+            <div class="obrazek-blok">
+                <img src="https://new.spskladno.cz/wp-content/uploads/2021/08/sps-kladno-9.jpg" alt="Budova školy">
+            </div>
+            <div class="obrazek-blok">
+                <img src="https://new.spskladno.cz/wp-content/uploads/2021/08/sps-kladno-1.jpg" alt="Workoutové hřiště">
+            </div>
+            <div class="obrazek-blok">
+                <img src="https://new.spskladno.cz/wp-content/uploads/2020/08/vos-sps-kladno-logo-5.png" alt="Logo školy">
+            </div>
+        </section>
+
+        <footer>
+            <div class="meta">Autor: Jaroslav Holeček</div>
+            <div class="meta">Kontakt: <a href="mailto:holecek.jaroslav (však vy víte co) email.cz">holecek.jaroslav (však vy víte co) email.cz</a></div>
+            <div class="meta">© 2025 Třída ABC • Poslední úprava: říjen 2025</div>
+        </footer>
+    </div>
+</body>
+</html>

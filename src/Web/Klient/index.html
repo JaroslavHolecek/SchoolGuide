@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>SG|Web-klient</title>
+    <link rel="stylesheet" href="../../styles/light.css">
+    <script src="../../js/scripts.js"></script>
+    <script src="./tasks.js"></script>
+</head>
+<body>
+    <template id="task-template">
+        <div id="" class="task">
+            <h2 class="task-heading"></h2>
+            <div class="task-description"></div>
+            <div class="task-result-view"><iframe src="./Solutions/"></iframe></div>
+            <!-- <div class="task-result-view"><iframe src="./Solutions/" onload="resizeIframe(this)"></iframe></div> -->
+            <div class="task-topic-hint"></div>
+            <div class="task-help"></div>
+        </div>
+    </template>
+
+    <h1>Webové stránky na straně klienta</h1>
+
+    <script>
+        let taskTemplate = document.getElementById('task-template');
+
+        tasks.forEach(task => {
+            document.body.appendChild(createTaskNodeFromTemplate(taskTemplate, task));
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Copperplate, sans-serif;
+        }
+        h1 {
+            background-color: #4CAF50;
+        }
+        p {
+            color: #333333;
+        }
+        ul {
+            background-color: #f0f0f0;
+            list-style-type: square;
+        }
+        ol {
+            color: #0044cc;
+            text-align: center;
+        }
+        a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+        }
+
+        #akce {
+            background-color: #e0f7da;
+            border-left: 5px solid #4CAF50;
+            padding-left: 10px;
+        }
+        .zvyrazneny {
+            background-color: #f8ed75;
+            font-style: italic;
+        }
+
+        /* Rozvržení stránky – zaoblené rohy a pozadí */
+        header, nav, section, footer {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        nav {
+            background-color: #d9ffa3;
+        }
+        section {
+            background-color: #939393;
+        }
+        footer {
+            background-color: #cccccc;
+            text-align: center;
+        }
+
+        /* Nové úpravy pro úkol s div a span */
+        div {
+            border: 2px solid #4CAF50;
+            background-color: #d9ffa3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        span {
+            color: #0044cc;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Stránka třídy ABC</h1>
+    </header>
+
+    <nav>
+        <a href="#skola">O škole</a> |
+        <a href="#trida">Třída</a> |
+        <a href="#predmety">Předměty</a> |
+        <a href="#zaci">Žáci</a> |
+        <a href="#akce">Akce</a> |
+        <a href="#odkaz">Odkaz</a> |
+        <a href="#obrazek">Obrázek</a>
+    </nav>
+
+    <section id="skola">
+        <h2>Škola</h2>
+        <p class="zvyrazneny">Střední průmyslová škola SPŠ a VOŠ Kladno je jediná kladenská průmyslová škola, na které jsou obory Informační technologie, Elektrotechnika a Strojírenství.</p>
+        <p>Škola má dlouholetou tradici a moderní vybavení.</p>
+    </section>
+
+    <section id="trida">
+        <h2>Třída</h2>
+        <p class="zvyrazneny">Naše třída studuje čtyřletý maturitní obor Elektrotechnika - Elektronické počítačové systémy a nastoupila v roce 2025.</p>
+        <p>Třída se skládá ze 30 žáků, kteří se zajímají o moderní technologie a programování.</p>
+    </section>
+
+    <section id="predmety">
+        <h2>Předměty</h2>
+        <p>Mezi hlavní předměty patří: matematika, fyzika, programování, elektronické počítačové systémy a další.</p>
+    </section>
+
+    <section id="zaci">
+        <h2>Žáci</h2>
+        <ul>
+            <li>Jan Novák</li>
+            <li>Petra Svobodová</li>
+            <li>Martin Dvořák</li>
+            <li>Lucie Malá</li>
+        </ul>
+    </section>
+
+    <section id="akce">
+        <h2>Akce třídy</h2>
+        <ol>
+            <li>Školní výlet do Krkonoš</li>
+            <li>Exkurze do technického muzea</li>
+            <li>Projektový den o obnovitelných zdrojích</li>
+            <li>Sportovní soutěž mezi třídami</li>
+        </ol>
+    </section>
+
+    <section id="odkaz">
+        <h2>Odkaz</h2>
+        <p>Více informací najdete na <a href="https://www.spskladno.cz" target="_blank">webu školy</a>.</p>
+    </section>
+
+    <section id="obrazek">
+        <h2>Obrázek školy</h2>
+        <div>
+            <p>Takto vypadá naše škola zvenku:</p>
+            <img src="https://new.spskladno.cz/wp-content/uploads/2021/08/sps-kladno-9.jpg" alt="Budova školy">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Třída ABC <span>|</span> Poslední úprava: říjen 2025</p>
+    </footer>
+</body>
+</html>
