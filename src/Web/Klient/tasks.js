@@ -1,6 +1,8 @@
 let tasks = [
+            // PRVNÍ ČÁST - základy html a css
             {
                 id: "about",
+                part: "html_css_first",
                 heading: "Jak to tu funguje? ",
                 descriptionHtml: "<p>Popis úkolu: Tato stránka obsahuje úkoly, které na sebe obsahově navazují. Toto je vždy obecný popis úkolu.</p>",
                 topicHintHtml: "<p>Tip na obsah: Pokud si <strong>nevytváříš stránku na vlastní téma</strong> (vlastní téma doporučujeme...), tak budeš vytvářet stránku na téma <strong>Osobní webová stránka</strong> a zde budeš mít vždy tip, k čemu použít zadaný prvek - můžeš samozřejmě prvek použít k čemukoliv jinému chceš.</p>",
@@ -12,6 +14,7 @@ let tasks = [
             },
             {
                 id: "setup",
+                part: "html_css_first",
                 heading: "Základní nastavení projektu",
                 descriptionHtml: "<p>Vytvoř složku pro svůj projekt, přidej do ní dva textové soubory: <code>index.html</code> a <code>styles.css</code>. Otevři oba soubory v textovém editoru a <code>index.html</code> v prohlížeči.</p><p>Do <code>index.html</code> přidej základní strukturu HTML dokumentu. A nezapomeň na propojení html souboru se souborem <code>styles.css</code>.</p>",
                 topicHintHtml: "<p>Složka s názvem <code>web-osobni</code>.</p>",
@@ -23,20 +26,22 @@ let tasks = [
                 ]
             },
             {
-            id: "h_p",
-            heading: "Nadpisy a odstavce",
-            descriptionHtml: "<p>Vytvoř stránku s hlavním nadpisem, několika podnadpisy a několika odstavci.</p><p>Změň font písma celé stránky, pozadí nadpisú a podnadpisů a barvu písma odstavců.</p>",
-            topicHintHtml: "<p>Hlavní nadpis - tvoje jméno.</br>Podnadpisy - osobní údaje, vzdělání, pracovní zkušenosti, volnočasové zájmy, ...</br>Odstavce - text  ke každému podnadpisu.</p>",
-            iframeSrc: "h_p.html",
-            help: [
-                {text: "Nadpisy (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"},
-                {text: "Nadpisy (W3Schools)", url: "https://www.w3schools.com/html/html_headings.asp"},
-                {text: "Text CSS (MDN)", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals"},
-                {text: "Základy CSS (W3Schools)", url: "https://www.w3schools.com/css/css_intro.asp"}
-            ]
+                id: "h_p",
+                part: "html_css_first",
+                heading: "Nadpisy a odstavce",
+                descriptionHtml: "<p>Vytvoř stránku s hlavním nadpisem, několika podnadpisy a několika odstavci.</p><p>Změň font písma celé stránky, pozadí nadpisú a podnadpisů a barvu písma odstavců.</p>",
+                topicHintHtml: "<p>Hlavní nadpis - tvoje jméno.</br>Podnadpisy - osobní údaje, vzdělání, pracovní zkušenosti, volnočasové zájmy, ...</br>Odstavce - text  ke každému podnadpisu.</p>",
+                iframeSrc: "h_p.html",
+                help: [
+                    {text: "Nadpisy (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"},
+                    {text: "Nadpisy (W3Schools)", url: "https://www.w3schools.com/html/html_headings.asp"},
+                    {text: "Text CSS (MDN)", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals"},
+                    {text: "Základy CSS (W3Schools)", url: "https://www.w3schools.com/css/css_intro.asp"}
+                ]
             },
             {
                 id: "ul",
+                part: "html_css_first",
                 heading: "Odrážkový seznam",
                 descriptionHtml: "<p>Přidej do stránky seznam, který není číslovaný, ale má odrážky. Uprav barvu pozadí seznamu a změň styl odrážek.</p>",
                 topicHintHtml: "<p>Nečíslovaný seznam tvých zájmů nebo oblíbených věcí (např. sporty, hudba, filmy...).</p>",
@@ -50,6 +55,7 @@ let tasks = [
             },
             {
                 id: "ol",
+                part: "html_css_first",
                 heading: "Číslovaný seznam",
                 descriptionHtml: "<p>Přidej do stránky seznam, jehož položky jsou číslované. Uprav zarovnání textu na střed a nastav jinou barvu písma pro položky seznamu.</p>",
                 topicHintHtml: "<p>Číslovaný seznam tvého vzdělání nebo pracovních zkušeností.</p>",
@@ -63,6 +69,7 @@ let tasks = [
             },
             {
                 id: "a",
+                part: "html_css_first",
                 heading: "Odkaz",
                 descriptionHtml: "<p>Přidej do stránky odkaz. Uprav jeho barvu a přidej změnu vzhledu při najetí myší.</p>",
                 topicHintHtml: "<p>Odkaz na oblíbenou webovou stránku (např. sociální síť, oblíbený filmový web nebo osobní blog).</p>",
@@ -76,6 +83,7 @@ let tasks = [
             },
             {
                 id: "img",
+                part: "html_css_first",
                 heading: "Obrázek",
                 descriptionHtml: "<p>Přidej do stránky obrázek. Nastav jeho šířku na 300 pixelů a zarovnej ho na střed.</p>",
                 topicHintHtml: "<p>Obrázek, který tě vystihuje (např. portrét, oblíbený sport nebo zvíře).</p>",
@@ -89,6 +97,7 @@ let tasks = [
             },
             {
                 id: "id_class",
+                part: "html_css_first",
                 heading: "Id a třídy",
                 descriptionHtml: "<p>Přidej do stránky prvek s atributem <code>id</code> a prvek s atributem <code>class</code>. Uprav jejich vzhled pomocí CSS. A vytvoř ve svojí stránce odkaz na prvek s <code>id</code>.</p>",
                 topicHintHtml: "<p>Prvek s <code>id</code> bude jeden z vedlejších nadpisů, prvek s <code>class</code> může být vždy první odstavec za nadpisem (přidej i další odstavce tak, aby některé měli <code>class</code> a některé ne).</p>",
@@ -104,6 +113,7 @@ let tasks = [
             },
             {
                 id: "layout",
+                part: "html_css_first",
                 heading: "Rozvržení stránky",
                 descriptionHtml: "<p>Použij na stránce prvky <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code> a <code>&lt;section&gt;</code> pro rozdělení obsahu.</p><p>Každé sekci nastav zaoblené rohy a barevné pozadí pomocí CSS.</p>",
                 topicHintHtml: "<p>V <code>&lt;header&gt;</code> může být hlavní nadpis, v <code>&lt;nav&gt;</code> odkazy na sekce, v <code>&lt;footer&gt;</code> informace o datumu poslední úpravy a důvodu vzniku těchto stránek, v <code>&lt;section&gt;</code> jednotlivé části obsahu.</p>",
@@ -119,6 +129,7 @@ let tasks = [
             },
             {
                 id: "div_span",
+                part: "html_css_first",
                 heading: "Blokové a řádkové prvky: div a span",
                 descriptionHtml: "<p>Přidej do stránky blokový prvek <code>&lt;div&gt;</code> a řádkový prvek <code>&lt;span&gt;</code>. Uprav jejich vzhled pomocí CSS: <code>div</code> nastav rámeček, barvu pozadí a vnitřní odsazení, <code>span</code> změň barvu písma a přidej podtržení.</p>",
                 topicHintHtml: "<p>Do <code>div</code> vlož text a obrázek v jedné ze sekcí, do <code>span</code> napiš oddělovač v rámci zápatí <code>footer</code>.</p>",
@@ -135,6 +146,7 @@ let tasks = [
             },
             {
                 id: "box_model",
+                part: "html_css_first",
                 heading: "Box model",
                 descriptionHtml: "<p>U vybraného prvku na stránce nastav pomocí CSS okraj (<code>margin</code>), vnitřní odsazení (<code>padding</code>), rámeček (<code>border</code>) a barvu pozadí (<code>background-color</code>). Sleduj, jak se mění prostor kolem a uvnitř prvku.</p><p>Využij také, že všechny zmíněné vlastnosti se dají nastavit i pro jednotlivé strany prvku zvlášť.</p>",
                 topicHintHtml: "<p>Vyber jeden z bloků na své osobní stránce (například část s informacemi o vzdělání nebo zájmech) a použij na něj různé hodnoty vlastností <code>margin</code>, <code>padding</code> a <code>border</code>, aby byl vizuálně odlišený od okolí.</p>",
@@ -149,6 +161,7 @@ let tasks = [
             },
             {
                 id: "inline_block",
+                part: "html_css_first",
                 heading: "Vodorovné uspořádání prvků",
                 descriptionHtml: "<p>Umísti několik prvků vedle sebe vodorovně. K tomu použij vlastnost <code>display: inline-block</code>. Každému prvku nastav šířku, výšku, barvu pozadí a vnější okraje, aby mezi nimi byl prostor.</p><p>Můžeš si vyzkoušet, jak se prvky chovají při různých šířkách okna a jak se zalamují na další řádek, pokud se nevejdou.</p>",
                 topicHintHtml: "<p>Na své osobní stránce můžeš tímto způsobem vedle sebe zobrazit například několik fotografií, ikon, krátkých textových bloků nebo odkazy na sociální sítě.</p>",
@@ -161,6 +174,7 @@ let tasks = [
             },
             {
                 id: "ucesani_1",
+                part: "html_css_first",
                 heading: "Učesání poprvé",
                 descriptionHtml: "<p>Nyní již znáš základy html a css dostatečné k tomu, abys vytvořil*a vcelku slušně vypadající jednoduchou webovou stránku. Pusť se do toho a zkus upravit tvojí stránku tak, aby vypadala k světu!</p>",
                 topicHintHtml: "<p>Moderní stránky obvykle využívají jednoduché, čisté tvary, zaoblené rohy a pouze několik málo decentních barev.</p>",
@@ -168,8 +182,12 @@ let tasks = [
                 help: [
                 ]
             },
+
+            // DRUHÁ ČÁST - responzivita
+
             {
                 id: "jednotky",
+                part: "html_css_second",
                 heading: "Jednotky v css",
                 descriptionHtml: "<p>Seznam se s jednotkami používanými v css - především s relativními jednotkami a uprav použití jednotek ve tvé stránce. Od této chvíle už používej zásadně jednotky relativní, pokud nemáš velmi dobrý důvod používat jednotky absolutní.</p>",
                 topicHintHtml: "<p>Jde pouze o úpravu použití jednotek ve tvé stránce.</p>",
@@ -181,6 +199,7 @@ let tasks = [
             },
             {
                 id: "vice_souboru",
+                part: "html_css_second",
                 heading: "Více souborů",
                 descriptionHtml: "<p>Vytvoř druhý nebo i více souborů na tvé stránce. Na prvním souboru bude odkaz na druhý soubor a naopak ve druhém souboru bude odkaz na první soubor. V obou souborech mohou být dva odkazy - na oba soubory (tedy i odkaz na soubor, ve kterém je tento odkaz) tomu se také někdy říká navigace nebo navigační menu.</p>",
                 topicHintHtml: "<p>Druhou stránku vytvoř na téma „Blog“, kde budou sepsané krátké články na různá témata, která řešíš, nebo tě zajímají, nebo by ses jimi chtěla zabývat v budoucnu. Vytvoř na obou stránkách navigační menu odkazující na obě stránky.</p>",
@@ -192,6 +211,7 @@ let tasks = [
             },
             {
                 id: "pseudo",
+                part: "html_css_second",
                 heading: "Pseudotřídy a pseudoelementy",
                 descriptionHtml: "<p>Použij pseudotřídy a pseudoelementy pro zajímavější grafické nastavení stránky.</p>",
                 topicHintHtml: "<p>Pseudotřídu použij při nastavení navigačního menu - jak budou vypadat položky při najetí kurzorem myši a poté, co se na ně již kliklo.</p><p>Použij pseudoelementy pro přidání dekorativních prvků na stránku blog - například první písmeno textu každé stránky bude jinak veliké, než zbytek textu a dále myší označený kus textu bude mít zvolenou barvu textu a zvolenou barvu pozadí.</p>",
@@ -205,6 +225,7 @@ let tasks = [
             },
             {
                 id: "responzivita",
+                part: "html_css_second",
                 heading: "Responzivní design",
                 descriptionHtml: "<p>Použij responzivní design (media queries) pro zajištění lepšího zobrazení na různě velkých zařízeních - telefonech a velkých monitorech, případně na telefonech na šířku a na výšku.</p><p>Dej si pozor na to, pro kterou velikost obrazovky se má nastavení vytvořit jako hlavní a pro kterou se má změnit (které nastavení bude v media query).</p><p>Aby sis vyzkoušela responzivní design, můžeš jednoduše zmenšit/zúžit okno prohlížeče, nebo můžeš použít nástroje pro vývojáře (klávesa F12) v prohlížeči a simulovat různé velikosti obrazovky a ovládání na dotykovém displeji.</p>",
                 topicHintHtml: "<p>Na úzké obrazovce budou krajní mezery velmi malé a dále se zvětší obrázky na titulní straně na 100% šířky, zatímco na širokých obrazovkách budou pouze přes 30% šířky.</p>",
@@ -218,6 +239,7 @@ let tasks = [
             },
             {
                 id: "tabulky",
+                part: "html_css_second",
                 heading: "Tabulky",
                 descriptionHtml: "<p>Vytvoř na webové stránce tabulku. Využij i souhrnné části tabulky jako <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> a <code>&lt;tfoot&gt;</code>.",
                 topicHintHtml: "<p>Vytvoř tabulku s oblíbenými knihami/filmy/tvůrci. V tabulce zapiš název díla (knihy/filmu/videa), jméno autora, rok vydání a typ díla (text, obraz, video).</p>",
@@ -231,6 +253,7 @@ let tasks = [
             },
             {
                 id: "flexbox_grid",
+                part: "html_css_second",
                 heading: "Flexbox a Grid",
                 descriptionHtml: "<p>Vytvoř na webové stránce prvek s dalšími prvky uvnitř, k jehož rozložení využiješ jednou Flexbox a jednou Grid. Ujisti se, že rozložení je responzivní a dobře se zobrazuje na různých zařízeních.</p>",
                 topicHintHtml: "<p>Vyzkoušej si vytvořit jednoduchou galerii obrázků pomocí Flexboxu a Gridu. Můžeš také experimentovat s různými směry a zarovnáním prvků.</p>",
@@ -244,14 +267,71 @@ let tasks = [
             },
             {
                 id: "ucesani_2",
+                part: "html_css_second",
                 heading: "Učesání podruhé",
                 descriptionHtml: "<p>Nyní již znáš solidní množství možností pro to, abys vytvořila moderní a atraktivní webovou stránku se statickým obsahem! Statický obsah znamená, že je vše pevně napsané v kódu stránky a nezáleží například na datech uložených v databázi, nebo na tom co zadá uživatel do formuláře.</p><p>Nenech se odradit tím, že ze začátku je obtížné dosáhnout své představy...</p><p>Neváhej také využít některé z LLM, které jsou v dnešní době mocným pomocníkem - nyní již víš, jak popsat do LLM tvůj požadavek pomocí správných termínů a co můžeš přibližně očekávát za výsledek.</p><p>Výsledku, který dostaneš z LLM, bys <strong>vždy měla rozumět</strong> a nemít ve svém projektu nic, o čem nevíš jak to funguje, co to dělá a proč je to v kódu napsané.</p>",
                 topicHintHtml: "<p>Vytvoř pěknou, čistou moderní stránku a vyzkoušej jak vypadá i na malých obrazovkách</p>",
                 help: [
                 ]
             },
-            
-            //javascript - úvod, formuláře ...
 
+            // TŘETÍ ČÁST - javascript - úvod, formuláře
+
+            {
+                id: "js_uvod",
+                part: "js_first",
+                heading: "Jak funguje JavaScript",
+                descriptionHtml: "<p>Seznam se s tím, jak v principu funguje JavaScript (jak se zapisuje do souboru typu html, kde se kód vykonává (kde se spotřebovává procesorový čas a paměť), co to je a kde lze najít konzoli).</p><p>Vytvoř jednoduchý skript v rámci html souboru, který vypíše do konzole zprávu 'Ahoj, už mi to běží!' pomocí <code>console.log()</code>.</p>",
+                topicHintHtml: "<p>Stačí jednoduchý skript, který vypíše zprávu do konzole - toto je pouze seznamovací úkol.</p>",
+                iframeSrc: "js_uvod.html",
+                help: [
+                    {text: "Úvod do JavaScriptu (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction"},
+                    {text: "Jak funguje JavaScript (W3Schools)", url: "https://www.w3schools.com/js/js_intro.asp"},
+                    {text: "Konzole v prohlížeči (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/API/Console"},
+                    {text: "console.log() (W3Schools)", url: "https://www.w3schools.com/jsref/met_console_log.asp"}
+                ]
+            },
+            {
+                id: "js_change_content",
+                part: "js_first",
+                heading: "Funkce, getElementById a změna obsahu stránky",
+                descriptionHtml: "<p>Seznam se s tím, co je to funkce, jak se volá a také jak a k čemu lze použít <code>getElementById()</code>.</p><p>Vytvoř a zavolej jednoduchou funkci, která změní text v odstavci s daným ID (protože se to stane ihned při načtení stránky, tak nebude vidět, že tam předtím byl jiný text, ale to upravíme v dalším úkolu).</p>",
+                topicHintHtml: "<p>V rámci html kódu bude v odstavci text 'Chudák text, který skoro okamžitě zmizí :-(' a JS funkce ho změní na 'Ahoj, jsem nový text, který je sem vložený pomocí JS'.</p>",
+                iframeSrc: "js_change_content_simple.html",
+                help: [
+                    {text: "Funkce v JavaScriptu (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"},
+                    {text: "Funkce v JavaScriptu (W3Schools)", url: "https://www.w3schools.com/js/js_functions.asp"},
+                    {text: "getElementById (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"},
+                    {text: "getElementById (W3Schools)", url: "https://www.w3schools.com/jsref/met_document_getelementbyid.asp"}
+                ]
+            },
+            {
+                id: "js_buttons_onclick",
+                part: "js_first",
+                heading: "Tlačítka a onclick událost",
+                descriptionHtml: "<p>Vytvoř v HTML tlačítko přídej k němu JS funkci, která se spustí při kliknutí. Vytvoř dvě tlačítka, která budou obě měnit text v odstavci se zadaným ID.</p><p>Každé tlačítko bude mít svou vlastní funkci, která provede požadovanou akci.</p>",
+                topicHintHtml: "<p>Jedno tlačítko bude vkládat text 'Jiný text. ' a druhé 'Hop a je tu zase něco jiného.'</p>",
+                iframeSrc: "js_buttons_onclick.html",
+                help: [
+                    {text: "HTML button element (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"},
+                    {text: "HTML button (W3Schools)", url: "https://www.w3schools.com/tags/tag_button.asp"},
+                    {text: "onclick event (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event"},
+                    {text: "onclick event (W3Schools)", url: "https://www.w3schools.com/jsref/event_onclick.asp"},
+                    {text: "JavaScript Events (W3Schools)", url: "https://www.w3schools.com/js/js_events.asp"}
+                ]
+            },
+            {
+                id: "js_buttons_styles",
+                part: "js_first",
+                heading: "Tlačítka a změna stylů",
+                descriptionHtml: "<p>Po kliknutí na talčítko se změní nejen obsah, ale i grafika nápisu.</p><p>Nejprve vyzkoušej změnit styl přímo, jednu vlastost po druhé. Většinou se však vytvoří css třída (viz úkoly v html a css) a pomocí js se změní třída, která je k prvku přiřazená (například se jedna třída odebere a druhá se přidá)</p>",
+                topicHintHtml: "<p>Změn pomocí tlačítka font a barvu písma.</p>",
+                iframeSrc: "js_buttons_styles.html",
+                help: [
+                    {text: "Manipulace s CSS pomocí JavaScriptu (MDN)", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#manipulating_styles"},
+                    {text: "JavaScript HTML DOM Style (W3Schools)", url: "https://www.w3schools.com/jsref/prop_style_color.asp"},
+                    {text: "Class list - třídy (W3Schools)", url: "https://www.w3schools.com/jsref/prop_element_classlist.asp"}
+                ]
+            },
 
         ];

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript změna obsahu prvku</title>
+    <link rel="stylesheet" href="js_first.css">
+</head>
+<body>
+    <h1>JavaScript změna obsahu při kliknutí</h1>
+    <p id="ke-zmene-textu">Starý text, který se na stránce příliš neohřeje :-(</p>
+    <button onclick="zmenObsahPrvni()">Klikni na mě!</button>
+    <button onclick="zmenObsahDruhy()">Ssst, Nevěř mu! - rozbije ti počítač!<br>Klikni místo toho na mě!</button>
+
+    <p>Každé tlačitko má k sobě "připojenou" svou vlastní funkci, která se spustí po kliknutí na toto tlačítko.</p>
+    <p><strong>Nenechte se zmást:</strong></p>
+    <ul>
+        <li>Docílit tohoto úkolu je možné mnoha různými způsoby.</li>
+        <li>Jednoduchý a navazující na předchozí úkol je popsaný hned navrchu zde <a href="https://www.w3schools.com/jsref/event_onclick.asp">https://www.w3schools.com/jsref/event_onclick.asp</a>.</li>
+    </ul>
+
+    <script>
+        function zmenObsahPrvni() {
+            document.getElementById('ke-zmene-textu').innerText = '( ;´ - `;) Hop, a je tu rozbitý počítač! :-(';
+        }
+
+        function zmenObsahDruhy() {
+            document.getElementById('ke-zmene-textu').innerText = '(≖_≖ ) Já ti to říkalo, ale ty si musíš vždycky dělat všechno po svém! :‹';
+        }
+    </script>
+</body>
+</html>

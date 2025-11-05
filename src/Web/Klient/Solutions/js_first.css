@@ -1,0 +1,72 @@
+:root {
+    --primary-green: #2d7d32;
+    --light-green: #4caf50;
+    --dark-green: #1b5e20;
+    --accent-green: #81c784;
+    --background-green: #f1f8e9;
+    --text-dark: #263238;
+    --text-light: #37474f;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-green);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.2rem solid var(--accent-green);
+    padding-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-light);
+}
+
+strong {
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+ul {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 0.3rem solid var(--light-green);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+@font-face {
+    font-family: 'horror-font';
+    src: url('../../../misc/bloody-terror-font/BloodyTerror-GOW9Z.ttf') format('truetype');
+}
+
+.calm_class {
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+.normal_class {
+    color: var(--text-light);
+    font-weight: normal;
+}

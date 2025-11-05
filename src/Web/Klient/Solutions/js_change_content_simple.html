@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript změna obsahu prvku</title>
+    <link rel="stylesheet" href="js_first.css">
+</head>
+<body>
+    <h1>JavaScript změna obsahu prvku</h1>
+    <p id="ke-zmene-textu">Starý text, který se na stránce příliš neohřeje :-(</p>
+    <p>Tato stránka obsahuje jednoduchý JavaScript kód, který změní obsah odstavce (prvku/tagu) na stránce. Stane se tak ihned po načtení stránky, takže není vidět, že tam předtím byl jiný text - to si však můžete ověřit ve zdrojovém souboru stránky.</p>
+    <p><strong>Na co hlavně nezapomenout:</strong></p>
+    <ul>
+        <li>Abys mohla využít funkci <code>document.getElementById()</code>, musíš mít v HTML kódu prvek s odpovídajícím ID - v našem případě některý z odstavců.</li>
+        <li>Funkce se obvykle spouští až poté, co se stane nějaká "událost" (kliknutí na tlačítko např.). Tomu se budeme věnovat v dalším úkolu.</li>
+    </ul>
+
+    <script>
+        function zmenObsah() {
+            document.getElementById('ke-zmene-textu').innerText = 'Ahoj, jsem nový text, který sem vložil JavaScript!';
+        }
+
+        zmenObsah();
+    </script>
+</body>
+</html>
