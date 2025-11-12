@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulář - Ukázka různých vstupů</title>
+    <link rel="stylesheet" href="js_second.css">
+</head>
+<body>
+    <div class="container">
+        <div id="vysledek">
+            <h2>Výsledky formuláře:</h2>
+            <p id="vystup_cisla"></p>
+            <p id="vystup_string"></p>
+        </div>
+
+        <h1>Formulář pro sčítání</h1>
+        
+        <form id="form-sum">
+            <label for="cislo1">První číslo:</label>
+            <input type="number" id="cislo1" name="cislo1" required>
+            <br><br>
+
+            <label for="cislo2">Druhé číslo:</label>
+            <input type="number" id="cislo2" name="cislo2" required>
+            <br><br>
+
+            <button type="button" onclick="sectiVstupy()">Sečti</button>
+        </form>        
+    </div>
+    
+    <script>
+        function sectiVstupy() {
+            const formular = document.getElementById('form-sum');
+            let vstup1 = formular.elements['cislo1'].value;
+            let vstup2 = formular.elements['cislo2'].value;
+            const c1 = parseFloat(vstup1);
+            const c2 = parseFloat(vstup2);
+
+            const soucet_string = vstup1 + vstup2;
+            const soucet_cisla = c1 + c2;
+
+            document.getElementById('vystup_cisla').innerHTML = `<strong>Výsledek sčítání:</strong> ${soucet_cisla}`;
+            document.getElementById('vystup_string').innerText = `Co když...: ${vstup1} + ${vstup2} = ${soucet_string}`;
+        }
+    </script>
+</body>
+</html>

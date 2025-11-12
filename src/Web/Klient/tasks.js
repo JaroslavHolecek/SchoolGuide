@@ -29,7 +29,7 @@ let tasks = [
                 id: "h_p",
                 part: "html_css_first",
                 heading: "Nadpisy a odstavce",
-                descriptionHtml: "<p>Vytvoř stránku s hlavním nadpisem, několika podnadpisy a několika odstavci.</p><p>Změň font písma celé stránky, pozadí nadpisú a podnadpisů a barvu písma odstavců.</p>",
+                descriptionHtml: "<p>Vytvoř stránku s hlavním nadpisem, několika podnadpisy a několika odstavci.</p><p>Změň font písma celé stránky, pozadí nadpisů a podnadpisů a barvu písma odstavců.</p>",
                 topicHintHtml: "<p>Hlavní nadpis - tvoje jméno.</br>Podnadpisy - osobní údaje, vzdělání, pracovní zkušenosti, volnočasové zájmy, ...</br>Odstavce - text  ke každému podnadpisu.</p>",
                 iframeSrc: "h_p.html",
                 help: [
@@ -116,7 +116,7 @@ let tasks = [
                 part: "html_css_first",
                 heading: "Rozvržení stránky",
                 descriptionHtml: "<p>Použij na stránce prvky <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code> a <code>&lt;section&gt;</code> pro rozdělení obsahu.</p><p>Každé sekci nastav zaoblené rohy a barevné pozadí pomocí CSS.</p>",
-                topicHintHtml: "<p>V <code>&lt;header&gt;</code> může být hlavní nadpis, v <code>&lt;nav&gt;</code> odkazy na sekce, v <code>&lt;footer&gt;</code> informace o datumu poslední úpravy a důvodu vzniku těchto stránek, v <code>&lt;section&gt;</code> jednotlivé části obsahu.</p>",
+                topicHintHtml: "<p>V <code>&lt;header&gt;</code> může být hlavní nadpis, v <code>&lt;nav&gt;</code> odkazy na sekce, v <code>&lt;footer&gt;</code> informace o datu poslední úpravy a důvodu vzniku těchto stránek, v <code>&lt;section&gt;</code> jednotlivé části obsahu.</p>",
                 iframeSrc: "layout.html",
                 help: [
                     {text: "Struktura stránky (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"},
@@ -269,7 +269,7 @@ let tasks = [
                 id: "ucesani_2",
                 part: "html_css_second",
                 heading: "Učesání podruhé",
-                descriptionHtml: "<p>Nyní již znáš solidní množství možností pro to, abys vytvořila moderní a atraktivní webovou stránku se statickým obsahem! Statický obsah znamená, že je vše pevně napsané v kódu stránky a nezáleží například na datech uložených v databázi, nebo na tom co zadá uživatel do formuláře.</p><p>Nenech se odradit tím, že ze začátku je obtížné dosáhnout své představy...</p><p>Neváhej také využít některé z LLM, které jsou v dnešní době mocným pomocníkem - nyní již víš, jak popsat do LLM tvůj požadavek pomocí správných termínů a co můžeš přibližně očekávát za výsledek.</p><p>Výsledku, který dostaneš z LLM, bys <strong>vždy měla rozumět</strong> a nemít ve svém projektu nic, o čem nevíš jak to funguje, co to dělá a proč je to v kódu napsané.</p>",
+                descriptionHtml: "<p>Nyní již znáš solidní množství možností pro to, abys vytvořila moderní a atraktivní webovou stránku se statickým obsahem! Statický obsah znamená, že je vše pevně napsané v kódu stránky a nezáleží například na datech uložených v databázi, nebo na tom co zadá uživatel do formuláře.</p><p>Nenech se odradit tím, že ze začátku je obtížné dosáhnout své představy...</p><p>Neváhej také využít některé z LLM, které jsou v dnešní době mocným pomocníkem - nyní již víš, jak popsat do LLM tvůj požadavek pomocí správných termínů a co můžeš přibližně očekávat za výsledek.</p><p>Výsledku, který dostaneš z LLM, bys <strong>vždy měla rozumět</strong> a nemít ve svém projektu nic, o čem nevíš jak to funguje, co to dělá a proč je to v kódu napsané.</p>",
                 topicHintHtml: "<p>Vytvoř pěknou, čistou moderní stránku a vyzkoušej jak vypadá i na malých obrazovkách</p>",
                 help: [
                 ]
@@ -309,7 +309,7 @@ let tasks = [
                 id: "js_buttons_onclick",
                 part: "js_first",
                 heading: "Tlačítka a onclick událost",
-                descriptionHtml: "<p>Vytvoř v HTML tlačítko přídej k němu JS funkci, která se spustí při kliknutí. Vytvoř dvě tlačítka, která budou obě měnit text v odstavci se zadaným ID.</p><p>Každé tlačítko bude mít svou vlastní funkci, která provede požadovanou akci.</p>",
+                descriptionHtml: "<p>Vytvoř v HTML tlačítko přidej k němu JS funkci, která se spustí při kliknutí. Vytvoř dvě tlačítka, která budou obě měnit text v odstavci se zadaným ID.</p><p>Každé tlačítko bude mít svou vlastní funkci, která provede požadovanou akci.</p>",
                 topicHintHtml: "<p>Jedno tlačítko bude vkládat text 'Jiný text. ' a druhé 'Hop a je tu zase něco jiného.'</p>",
                 iframeSrc: "js_buttons_onclick.html",
                 help: [
@@ -324,13 +324,41 @@ let tasks = [
                 id: "js_buttons_styles",
                 part: "js_first",
                 heading: "Tlačítka a změna stylů",
-                descriptionHtml: "<p>Po kliknutí na talčítko se změní nejen obsah, ale i grafika nápisu.</p><p>Nejprve vyzkoušej změnit styl přímo, jednu vlastost po druhé. Většinou se však vytvoří css třída (viz úkoly v html a css) a pomocí js se změní třída, která je k prvku přiřazená (například se jedna třída odebere a druhá se přidá)</p>",
+                descriptionHtml: "<p>Po kliknutí na tlačítko se změní nejen obsah, ale i grafika nápisu.</p><p>Nejprve vyzkoušej změnit styl přímo, jednu vlastnost po druhé. Většinou se však vytvoří css třída (viz úkoly v html a css) a pomocí js se změní třída, která je k prvku přiřazená (například se jedna třída odebere a druhá se přidá)</p>",
                 topicHintHtml: "<p>Změn pomocí tlačítka font a barvu písma.</p>",
                 iframeSrc: "js_buttons_styles.html",
                 help: [
                     {text: "Manipulace s CSS pomocí JavaScriptu (MDN)", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#manipulating_styles"},
                     {text: "JavaScript HTML DOM Style (W3Schools)", url: "https://www.w3schools.com/jsref/prop_style_color.asp"},
                     {text: "Class list - třídy (W3Schools)", url: "https://www.w3schools.com/jsref/prop_element_classlist.asp"}
+                ]
+            },
+            {
+                id: "js_forms_simple",
+                part: "js_second",
+                heading: "Formuláře a zpracování vstupu",
+                descriptionHtml: "<p>Vytvoř formulář a do připraveného odstavce textu vypiš, po stisknutí tlačítka, hodnoty zadané do formuláře. Vyzkoušej si ve formuláři různé typy vstupů jako např. text, e-mail, heslo, číslo, datum, barvu a další.</p>",
+                topicHintHtml: "<p>Až si vyzkoušíš různé možnosti vstupu, vytvoř formulář, do kterého lze zadat své jméno, datum narození a oblíbené jídlo a po stisknutí tlačítka se objeví nějaká pěkná zpráva s těmito třemi informacemi - třeba: Ahoj [jméno], co jsi se narodil*a [datum] a máš rád*a [jídlo], měj dnes hezký den :-)</p>",
+                iframeSrc: "js_forms_simple.html",
+                help: [
+                    {text: "HTML Forms (MDN)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"},
+                    {text: "HTML Forms (W3Schools)", url: "https://www.w3schools.com/html/html_forms.asp"},
+                    {text: "Typy vstupů (W3Schools)", url: "https://www.w3schools.com/html/html_form_input_types.asp"},
+                    {text: "Čtení dat z formuláře (W3Schools)", url: "https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_form_elements_nameditem"},
+                    {text: "Label (W3Schools)", url: "https://www.w3schools.com/tags/tag_label.asp"}
+                ]
+            },
+            {
+                id: "js_forms_sum",
+                part: "js_second",
+                heading: "Formuláře součet",
+                descriptionHtml: "<p>Vytvoř formulář, do kterého se zadají dvě čísla a po stisknutí tlačítka se jejich součet vypíše do připraveného odstavce.</p>",
+                topicHintHtml: "<p>Zkus vytvořit více tlačítek, pro různé operace (např. násobení, dělení, odčítání atd.).</p>",
+                iframeSrc: "js_forms_sum.html",
+                help: [
+                    {text: "Typy vstupů (W3Schools)", url: "https://www.w3schools.com/html/html_form_input_types.asp"},
+                    {text: "Čtení dat z formuláře (W3Schools)", url: "https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_form_elements_nameditem"},
+                    {text: "JavaScript Operators (W3Schools)", url: "https://www.w3schools.com/js/js_operators.asp"}
                 ]
             },
 

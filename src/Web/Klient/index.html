@@ -32,7 +32,8 @@
     <nav>
         <a href="#html_css_first">Základy HTML a CSS</a> |
         <a href="#html_css_second">Responzivní HTML a CSS</a> |
-        <a href="#js_first">Základy JavaScriptu (JS)</a>
+        <a href="#js_first">Základy JavaScriptu (JS)</a> |
+        <a href="#js_second">Formuláře s JavaScriptem</a>
     </nav>
 
     <script>
@@ -72,6 +73,18 @@
             {
                 groupHeading: "Základy JavaScriptu (JS)",
                 tasks: tasks.filter(task => task.part === "js_first")
+            }
+        ));
+
+        document.body.appendChild(createTasksGroupNodeFromTemplate(
+            "js_second",
+            {
+                group_template: groupTemplate,
+                task_template: taskTemplate
+            },
+            {
+                groupHeading: "Formuláře s JavaScriptem",
+                tasks: tasks.filter(task => task.part === "js_second")
             }
         ));
 

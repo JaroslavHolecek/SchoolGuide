@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulář - Ukázka různých vstupů</title>
+    <link rel="stylesheet" href="js_second.css">
+</head>
+<body>
+    <div class="container">
+        <div id="vysledek">
+            <h2>Výsledky formuláře:</h2>
+            <p id="vystup"></p>
+            <p id="vystup_obycejny"></p>
+        </div>
+
+        <h1>Formulář s různými vstupy</h1>
+        
+        <form id="mujFormular">
+            <div class="form-group">
+                <label for="jmeno">Jméno (text):</label>
+                <input type="text" id="jmeno" name="jmeno" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="heslo">Heslo:</label>
+                <input type="password" id="heslo" name="heslo">
+            </div>
+            
+            <div class="form-group">
+                <label for="vek">Věk (číslo):</label>
+                <input type="number" id="vek" name="vek" min="1" max="120">
+            </div>
+            
+            <div class="form-group">
+                <label for="datum">Datum narození:</label>
+                <input type="date" id="datum" name="datum">
+            </div>
+            
+            <div class="form-group">
+                <label for="cas">Čas:</label>
+                <input type="time" id="cas" name="cas">
+            </div>
+            
+            <div class="form-group">
+                <label for="barva">Oblíbená barva:</label>
+                <input type="color" id="barva" name="barva" value="#4CAF50">
+            </div>
+            
+            <div class="form-group">
+                <label for="rozsah">Hodnocení (1-10):</label>
+                <input type="range" id="rozsah" name="rozsah" min="1" max="10" value="5">
+            </div>
+            
+            <button type="button" onclick="zpracujFormular()">Zpracovat formulář</button>
+        </form>        
+    </div>
+    
+    <script>
+        function zpracujFormular() {
+
+            // číst hodnoty jde přímo z formuláře - přes jejich ID
+            const jmeno = document.getElementById('jmeno').value;
+            const email = document.getElementById('email').value;
+            const heslo = document.getElementById('heslo').value;
+
+            // nebo přes formulář a jeho vstupní prvky - přes jejich name
+            const formular = document.getElementById('mujFormular');
+            const vek = formular.elements['vek'].value;
+            const datum = formular.elements['datum'].value;
+            const cas = formular.elements['cas'].value;
+            const barva = formular.elements['barva'].value;
+            const rozsah = formular.elements['rozsah'].value;
+
+            const vystup = `
+                <strong>Jméno:</strong> ${jmeno}<br>
+                <strong>E-mail:</strong> ${email}<br>
+                <strong>Heslo:</strong> ${'*'.repeat(heslo.length)} -> ${heslo}<br>
+                <strong>Věk:</strong> ${vek}<br>
+                <strong>Datum narození:</strong> ${datum}<br>
+                <strong>Čas:</strong> ${cas}<br>
+                <strong>Oblíbená barva:</strong> <span style="color: ${barva}">■</span> ${barva}<br>
+                <strong>Hodnocení:</strong> ${rozsah}/10
+            `;
+            
+            document.getElementById('vystup').innerHTML = vystup;
+            document.getElementById('vystup_obycejny').innerText = "Obyčejně: " + jmeno + ', ' + email + ', ' + heslo + ', ' + vek + ', ' + datum + ', ' + cas + ', ' + barva + ', ' + rozsah;
+        }
+    </script>
+</body>
+</html>
