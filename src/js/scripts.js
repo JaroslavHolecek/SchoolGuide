@@ -38,3 +38,20 @@ function createTasksGroupNodeFromTemplate(id, {group_template, task_template}, {
     });
     return node;
 }
+
+function addTaskGroupToPage(id, templates, groupData) {
+    const groupNode = createTasksGroupNodeFromTemplate(id, templates, groupData);
+    document.getElementById('tasks-container').appendChild(groupNode);
+
+    const navLinks = document.querySelector('nav');
+        const navLink = document.createElement('a');
+        navLink.href = `#${id}`;
+        navLink.textContent = groupData.groupHeading;
+
+        if (navLinks.children.length > 0) {
+            navLinks.appendChild(document.createTextNode(' | '));
+        }
+
+        navLinks.appendChild(navLink);
+        
+}

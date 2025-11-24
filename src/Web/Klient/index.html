@@ -29,64 +29,75 @@
     <header>
     <h1>Webové stránky na straně klienta</h1>
     </header>
-    <nav>
-        <a href="#html_css_first">Základy HTML a CSS</a> |
-        <a href="#html_css_second">Responzivní HTML a CSS</a> |
-        <a href="#js_first">Základy JavaScriptu (JS)</a> |
-        <a href="#js_second">Formuláře s JavaScriptem</a>
-    </nav>
+    <nav></nav>
+
+    <div id="tasks-container">
+        <!-- Task groups will be appended here -->
+    </div>
 
     <script>
         let taskTemplate = document.getElementById('task-template');
         let groupTemplate = document.getElementById('tasks-group-template');
 
-        document.body.appendChild(createTasksGroupNodeFromTemplate(
-            "html_css_first",
+        addTaskGroupToPage(
+            "html_css_init",
             {
                 group_template: groupTemplate,
                 task_template: taskTemplate
             }, 
             {
                 groupHeading: "Základy HTML a CSS",
-                tasks: tasks.filter(task => task.part === "html_css_first")
+                tasks: tasks.filter(task => task.part === "html_css_init")
             }
-        ));
+        );
 
-        document.body.appendChild(createTasksGroupNodeFromTemplate(
-            "html_css_second",
+        addTaskGroupToPage(
+            "html_css_responsive",
             {
                 group_template: groupTemplate,
                 task_template: taskTemplate
             },
             {
                 groupHeading: "Responzivní HTML a CSS",
-                tasks: tasks.filter(task => task.part === "html_css_second")
+                tasks: tasks.filter(task => task.part === "html_css_responsive")
             }
-        ));
+        );
 
-        document.body.appendChild(createTasksGroupNodeFromTemplate(
-            "js_first",
+        addTaskGroupToPage(
+            "js_init",
             {
                 group_template: groupTemplate,
                 task_template: taskTemplate
             },
             {
                 groupHeading: "Základy JavaScriptu (JS)",
-                tasks: tasks.filter(task => task.part === "js_first")
+                tasks: tasks.filter(task => task.part === "js_init")
             }
-        ));
+        );
 
-        document.body.appendChild(createTasksGroupNodeFromTemplate(
-            "js_second",
+        addTaskGroupToPage(
+            "js_forms_events",
             {
                 group_template: groupTemplate,
                 task_template: taskTemplate
             },
             {
-                groupHeading: "Formuláře s JavaScriptem",
-                tasks: tasks.filter(task => task.part === "js_second")
+                groupHeading: "Formuláře a události s JS",
+                tasks: tasks.filter(task => task.part === "js_forms_events")
             }
-        ));
+        );
+
+        addTaskGroupToPage(
+            "js_syntax_basic",
+            {
+                group_template: groupTemplate,
+                task_template: taskTemplate
+            },
+            {
+                groupHeading: "JS podrobněji",
+                tasks: tasks.filter(task => task.part === "js_syntax_basic")
+            }
+        );
 
     </script>
 
